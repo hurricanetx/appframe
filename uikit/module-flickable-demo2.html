@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-flickable</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+  <div class="ui-page-navbar ui-hide">
+      <div class="ui-page-inner">
+          <span class="ui-navbar-left ui-operate">
+              <a href="module-flickable.html">
+                  <i class="icon icon-back"></i>
+                  <span>Flickable</span>
+              </a>
+          </span>
+          <span class="ui-navbar-center ui-navbar-text">翻转卡片</span>
+      </div>
+  </div>
+  <style>
+  #demo2-wrapper {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    background: #DDDDDD;
+    overflow: hidden;
+  }
+  #demo2 {
+    width: 3200px;
+    height: 200px;
+  }
+  #demo2 li
+    {
+      display: block;
+      float: left;
+      width: 200px;
+      height: 200px;
+    }
+    
+    #demo2 li a
+    {
+      color: blue;
+      display: block;
+      height: 160px;
+      line-height: 160px;
+      text-align: center;
+      margin: 20px;
+      background: #fff;
+      -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .2);
+      -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .2);
+      box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .2);
+    }
+  </style>
+  <h3 class="ui-block-title">Demo 2: Thumbnail Slider</h3>
+  <div class="ui-panel">
+      <p>This is similar to the way the App Store allows you to flip through app screenshots, but it can also be used to allow users to slide through navigation items that don’t fit within a single page. </p>
+  </div>
+  <div id="demo2-wrapper" class="clearfix">
+  
+    <ul id="demo2">
+
+      <li><a>Tap Me 1</a></li>
+      <li><a>Tap Me 2</a></li>
+      <li><a>Tap Me 3</a></li>
+      <li><a>Tap Me 4</a></li>
+  
+      <li><a>Tap Me 5</a></li>
+      <li><a>Tap Me 6</a></li>
+      <li><a>Tap Me 7</a></li>
+      <li><a>Tap Me 8</a></li>
+      
+      <li><a>Tap Me 9</a></li>
+      <li><a>Tap Me 10</a></li>
+      <li><a>Tap Me 11</a></li>
+      <li><a>Tap Me 12</a></li>
+      
+      <li><a>Tap Me 13</a></li>
+      <li><a>Tap Me 14</a></li>
+      <li><a>Tap Me 15</a></li>
+      <li><a>Tap Me 16</a></li>
+
+    </ul>
+    
+  </div>
+  <script type="text/javascript" src="../assets/module/zepto.fx.min.js"></script>
+  <script type="text/javascript" src="../assets/module/effect.flickable.min.js"></script>
+  <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+      $("body").autoapp();
+      $('#demo2').flickable({segments:8});
+      $('#demo2 a').tap(function(){ alert('You just tapped "'+$(this).text()+'"'); });
+  });
+  </script>
+</body>
+</html>

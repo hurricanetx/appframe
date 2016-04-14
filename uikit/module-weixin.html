@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-lazyload</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">微信控制函数库</span>
+        </div>
+    </div>
+   
+    <h3 class="ui-block-title">微信控制测试案例</h3>
+    <div class="ui-panel ui-border-tb">
+        <p>这是一个测试页面！请直接分享到微信好友、朋友圈、腾讯微博看效果吧！</p>
+        <p>如果你是扫一扫过来的，可以复制连接，然后发给任何一个微信好友，再点击连接进入测试</p>
+        <button class="ui-btn" id="optionMenu">WeixinApi.hideOptionMenu</button><br/><br/>
+        <button class="ui-btn" id="toolbar">WeixinApi.hideToolbar</button><br/><br/>
+        <button class="ui-btn" id="networkType">WeixinApi.getNetworkType</button><br/><br/>
+        <button class="ui-btn" id="imagePreview">WeixinApi.imagePreview</button><br/><br/>
+        <button class="ui-btn" id="scanQRCode">WeixinApi.scanQRCode</button><br/><br/>
+        <button class="ui-btn" id="getInstallState">WeixinApi.getInstallState</button><br/><br/><br/><br/>
+        <button class="ui-btn ui-tapable" data-target="?">点击这里刷新！！！！</button><br/><br/><br/><br/>
+        <button class="ui-btn" id="closeWindow">WeixinApi.closeWindow</button><br/><br/>
+    </div>
+
+    <script type="text/javascript" src="../assets/module/ext.weixinApi.min.js"></script>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+    });
+    // 给按钮增加click事件：请不要太纠结这个写法，demo而已
+    var addEvent = function(elId,listener){
+        document.getElementById(elId)
+                .addEventListener('click',function(e){
+                    if(!window.WeixinApi || !window.WeixinJSBridge) {
+                        alert('请确认您是在微信内置浏览器中打开的，并且ext.weixinApi.min.js已正确引用');
+                        e.preventDefault();
+                        return false;
+                    }
+                    listener(this,e);
+                },false);
+    };
+
+    // 两个Flag
+    var optionMenuOn = true;
+    var toolbarOn = true;
+
+    // optionMenu的控制
+    addEvent('optionMenu',function(el,e){
+        if(optionMenuOn) {
+            el.innerHTML = "WeixinApi.showOptionMenu";
+            WeixinApi.hideOptionMenu();
+        }else{
+            el.innerHTML = "WeixinApi.hideOptionMenu";
+            WeixinApi.showOptionMenu();
+        }
+        optionMenuOn = !optionMenuOn;
+    });
+
+    // toolbar的控制
+    addEvent('toolbar',function(el,e){
+        if(toolbarOn) {
+            el.textContent = "WeixinApi.showToolbar";
+            WeixinApi.hideToolbar();
+        }else{
+            el.textContent = "WeixinApi.hideToolbar";
+            WeixinApi.showToolbar();
+        }
+        toolbarOn = !toolbarOn;
+    });
+
+    // 获取网络类型
+    addEvent('networkType',function(el,e){
+        WeixinApi.getNetworkType(function(network) {
+            alert("当前网络类型：" + network);
+        });
+    });
+
+    // 调起客户端的图片播放组件
+    addEvent('imagePreview',function(el,e){
+        var picList = ["http:\/\/content.52pk.com\/files\/121122\/1284656_175821_1_lit.jpg","http:\/\/img.pconline.com.cn\/images\/upload\/upc\/tx\/wallpaper\/1210\/12\/c2\/14392902_1350034147327_320x480.jpg","http:\/\/www.520bizhi.com\/uploads\/allimg\/1009\/1-1009140646300-L.jpg","http:\/\/sjrjy.apkzz.net\/201009\/17115639e6c12f45db3765.jpg","http:\/\/www.yangshengzhidao.net\/uploads\/allimg\/120419\/1-12041Z120344C.jpg","http:\/\/himg2.huanqiu.com\/attachment2010\/110223\/c929b22ce3.jpg","http:\/\/p3.gexing.com\/kongjianpifu\/20121216\/1544\/50cd7be750bcf.jpg","http:\/\/pic.4j4j.cn\/upload\/pic\/20130530\/2eb0183d5a.jpg","http:\/\/img.973.com\/newspic\/7db\/7db758a2215a803fad99f586ae7c9787.jpg","http:\/\/pic9.nipic.com\/20100908\/1304280_110709063517_2.jpg","http:\/\/ww3.sinaimg.cn\/large\/a8a2249djw1dxcnox2sirj.jpg","http:\/\/pic6.nipic.com\/20100408\/3017209_004258840970_2.jpg","http:\/\/gamedog.file.92game.net\/uploads\/image\/201210\/2012101614858.jpg","http:\/\/images.china.cn\/news\/attachement\/jpg\/site3\/20110704\/1661695933156343779.jpg","http:\/\/p3.image.hiapk.com\/uploads\/allimg\/120717\/155433F95-16.jpg","http:\/\/www.52desktop.cn\/upimg\/allimg\/080726\/121F455621601423J3.jpg","http:\/\/pic5.nipic.com\/20100126\/2177138_152546644456_2.jpg","http:\/\/image.hiapk.com\/pic\/2012\/07\/17\/and_pic_pbbz_20120717_003.jpg","http:\/\/news.hainan.net\/Editor\/UploadFile08\/2010w2r4f\/20102422163295.jpg","http:\/\/www.lady.8gul.com\/upimg\/allimg\/090613\/1224210868974.jpg","http:\/\/news.boxuu.com\/news\/newsimage\/uploadimage\/81\/2010426103352266.jpg","http:\/\/www.jscode.cn\/upload\/200909\/200912022322411816.jpg","http:\/\/h.hiphotos.bdimg.com\/album\/w%3D2048\/sign=b335513fa2cc7cd9fa2d33d90d39233f\/35a85edf8db1cb1356ce76c1dc54564e93584bb8.jpg","http:\/\/pic5.nipic.com\/20100302\/2177138_084157432259_2.jpg","http:\/\/bz.onegreen.net\/d\/file\/20121227\/092013-nyp5k3qvsp3.jpg","http:\/\/dl.yzz.cn\/public\/images\/100819\/95_112742_3.jpg","http:\/\/pic.4j4j.cn\/upload\/pic\/20130731\/6a01b63f53.jpg","http:\/\/amuse.nen.com.cn\/imagelist\/11\/16\/gwer1xs9w50q.jpg","http:\/\/iphone.images.paojiao.cn\/iphone\/paper\/20116\/30\/74970434\/paojiao_3a066a72.jpg","http:\/\/www.sucai.com.cn\/bizhi\/attach\/2012-04\/1335514463udxb.jpg","http:\/\/d1.brcdn.cn\/download\/2011\/09\/20\/baoruan.com_2697e34.jpg","http:\/\/www.jsqq.net\/uploads\/allimg\/101026\/1_101026080555_3.jpg","http:\/\/pic.4j4j.cn\/upload\/pic\/20130603\/fc466a5bb0.jpg","http:\/\/pic7.nipic.com\/20100429\/1295091_095226332987_2.jpg","http:\/\/img1.27.cn\/images\/201201\/14\/1326548564_41704300.jpg","http:\/\/www.shediy.com\/bizhi\/Image\/20113592.jpg","http:\/\/www.sootoo.com\/son_media\/msg\/2012\/05\/11\/289024.jpg","http:\/\/img1.aili.com\/images\/201203\/13\/1331640731_06280600.jpg","http:\/\/pic13.nipic.com\/20110303\/2164151_134544417118_2.jpg","http:\/\/pic.yesky.com\/imagelist\/07\/06\/2053096_2190.jpg","http:\/\/pic.yesky.com\/imagelist\/08\/01\/10646534_3791.jpg","http:\/\/pic.jschina.com.cn\/0\/19\/78\/13\/19781339_741010.jpg","http:\/\/www.jiankangzu.com\/pian\/09\/2011091318265598.jpg","http:\/\/www.kole8.com\/desktop\/desk_file-11\/4\/15\/2011\/8\/201182822273813.jpg","http:\/\/images.enet.com.cn\/2010\/0612\/95\/3067774\/r_pe_413.jpg","http:\/\/pic.jschina.com.cn\/0\/19\/78\/04\/19780486_713034.jpg","http:\/\/dl.yzz.cn\/public\/images\/100520\/29_115356_3.jpg","http:\/\/img.taopic.com\/uploads\/allimg\/120225\/60416-120225104H763.jpg","http:\/\/pic.4j4j.cn\/upload\/pic\/20130528\/dd58cb92b6.jpg","http:\/\/img1.ali213.net\/picfile\/News\/2013\/02\/09\/pm\/L30.jpg","http:\/\/pic.jschina.com.cn\/0\/19\/78\/13\/19781336_828355.jpg","http:\/\/img2.iqilu.com\/ed\/10\/05\/07\/13\/31_100507093116_1.jpg","http:\/\/pic.jschina.com.cn\/0\/19\/78\/13\/19781338_164673.jpg","http:\/\/pic14.nipic.com\/20110614\/2786001_073210787000_2.jpg","http:\/\/pic.jschina.com.cn\/0\/19\/78\/13\/19781343_992544.jpg","http:\/\/pic.jschina.com.cn\/0\/19\/78\/13\/19781335_023831.jpg","http:\/\/www.kole8.com\/desktop\/desk_file-11\/4\/15\/2012\/4\/201249900328.jpg","http:\/\/pic.jschina.com.cn\/0\/19\/78\/13\/19781337_918956.jpg","http:\/\/www.jiankangzu.com\/pian\/02\/20110218221440931.jpg","http:\/\/photocdn.sohu.com\/20110615\/Img310206621.jpg","http:\/\/www.newhi.cn\/upload\/201107082319488326.jpg","http:\/\/img3.zdface.com\/tutu\/2011-11-02\/a4fb90cdd6eb8f039ff8719912cccd17.jpg","http:\/\/www.taihainet.com\/news\/UploadFiles_6334\/201209\/20120918071853575.jpg","http:\/\/image.mop.com\/sh\/pic\/tsgs\/2007\/0619\/4_20_10766_363_7_20070626191720_w650.jpg","http:\/\/61.155.203.28\/wldst\/cslm\/images\/2011\/12\/14\/7556EAB319354B81AE9700E9D27FFBB4.JPG","http:\/\/image.mop.com\/sh\/nn\/2007\/0619\/4_1_312867_8_26_20070619082505_max350.jpg","http:\/\/news.sznews.com\/content\/images\/site3\/20070417\/20070417113135_3H7SLJPL.jpg","http:\/\/news.sosol.com.cn\/news\/html\/shtml\/NewsImage\/20070720\/20070720115811747.jpg","http:\/\/img01.tooopen.com\/Downs\/images\/2010\/5\/6\/sy_20100506171316734054.jpg","http:\/\/www.s1979.com\/uploads\/allimg\/130130\/66-130130094202.jpg","http:\/\/picview01.baomihua.com\/photos\/20111220\/m_14_634599961776093750_17211584.jpg","http:\/\/file.manylaw.com\/manylaw\/manylaw\/zhangguiming\/2011\/08\/12\/34e6538edf417c95d007898ad01371da.jpg","http:\/\/upload.itxinwen.com\/2013\/0625\/1372139176595.jpg","http:\/\/www.e2e1234.com\/upFiles\/infoImg\/2011012848899065.jpg","http:\/\/www.fengxiong.in\/uploads\/allimg\/091114\/19522W400-3.jpg","http:\/\/img1.iqilu.com\/ed\/11\/05\/03\/87\/171_110503133401_1.jpg","http:\/\/mt0.haibao.cn\/store\/post\/attachments\/gucci0016sc_OTe78ZdbdSEV.jpg","http:\/\/image-0.poco.cn\/pic_center\/img\/971\/45cb3189351c5b20fe04bcd3637c923f_640.jpg","http:\/\/i.ssimg.cn\/sscms\/2012\/08\/28\/924ac7dd549c46dfb0725a9cc3088a60463.jpg","http:\/\/www.e2e1234.com\/upFiles\/infoImg\/20110128133358687.jpg","http:\/\/365jia.cn\/uploads\/11\/0212\/4d5695ba29f57.jpg","http:\/\/www.121121.net\/upFiles\/infoImg\/20110128133403403.jpg","http:\/\/pic2.52pk.com\/files\/101012\/136713_104622_5685.jpg","http:\/\/hiphotos.baidu.com\/%B7%AE%CD%AE%C0%DA\/pic\/item\/8453444b2557da09aec3ab46.jpg","http:\/\/img1.27.cn\/images\/201201\/06\/1325819617_94310100.jpg","http:\/\/www.07073.com\/uploads\/100519\/766578_105719_6.jpg","http:\/\/www.jiankangzu.com\/pian\/06\/201106141549062983.jpg","http:\/\/www.jiankangzu.com\/pian\/02\/201202211537277454.jpg","http:\/\/www.hack50.com\/article\/uploadpic\/2009-11\/20091162343019427.jpg","http:\/\/www.dahe.cn\/xwzx\/sh\/W020051118349422032166.jpg","http:\/\/pic.live8bo1.com\/npicture\/2012\/711\/864FN4TQ05HE0005.jpg","http:\/\/www.icoou.com\/uploadfile_20091016\/2011\/01\/21\/20110121153139126.jpg","http:\/\/cimg.163.com\/news\/2005\/6\/17\/20050617035409d41d8.jpg","http:\/\/365jilin.com\/uploads\/allimg\/130326\/1566-130326103F6-50.jpg","http:\/\/www.flyxg.com\/attachments\/2012\/03\/38051_201203222221353sok9.jpg","http:\/\/news.yzz.cn\/public\/images\/101012\/68_112034_3_lit.jpg","http:\/\/img1.27.cn\/images\/201110\/20\/1319080638_86759000.jpg","http:\/\/www.07073.com\/uploads\/100519\/766578_105855_1.jpg","http:\/\/a.hiphotos.baidu.com\/zhidao\/pic\/item\/ac6eddc451da81cb91b887705266d01609243134.jpg","http:\/\/img1.27.cn\/images\/201202\/28\/1330418492_79854800.jpg","http:\/\/ww3.sinaimg.cn\/mw600\/9860ed91gw1dxnrw20viej.jpg","http:\/\/img1.533.com\/images\/201103\/02\/1299041769_37984900.jpg","http:\/\/img3.zdface.com\/star\/2011-12-01\/749c7b28de130d0b2e017fa26f9dccf8.jpg","http:\/\/pic31.nipic.com\/20130709\/3957233_221625814000_2.jpg","http:\/\/img1.27.cn\/images\/201104\/22\/1303464342_34913600.jpg","http:\/\/img1.27.cn\/images\/201202\/28\/1330426409_62278400.jpg","http:\/\/www.rt-520.cn\/Image\/20094212349437877804.jpg","http:\/\/titanimg.titan24.com\/game\/20120829\/99f482a50830f6cf372f1b38b944909a.jpg","http:\/\/images.rednet.cn\/articleimage\/2011\/11\/02\/1047346825.jpg","http:\/\/www.mcxb.com\/Picture\/Picture2008\/200809\/2008923113333979.jpg","http:\/\/www.07073.com\/uploads\/110615\/628884_094211_1.jpg","http:\/\/photo.000men.com\/wp-content\/uploads\/2009\/12\/luozhaojuankuan5.jpg","http:\/\/www.zsnews.cn\/data\/photo\/Backup\/2013\/06\/11\/tw_201361110124140200.jpg","http:\/\/pic.haixiachina.com\/baoliao\/user\/2010\/08\/26\/haixiachina6c3411e706ced5bdf4a4a98af9455dff.jpg","http:\/\/tp.longhoo.net\/attachement\/jpg\/site2\/20120321\/6c626d7b1b6d10d3afe651.jpg","http:\/\/news.sznews.com\/content\/images\/site3\/20070417\/245643_4.jpg","http:\/\/images.rednet.cn\/articleimage\/2011\/11\/02\/1048584332.jpg","http:\/\/himg2.huanqiu.com\/attachment\/080806\/7c7ad060c0.jpg","http:\/\/pic.dbw.cn\/0\/02\/69\/90\/2699001_590628.jpg","http:\/\/cimg.163.com\/news\/2005\/6\/17\/20050617035553d41d8.jpg","http:\/\/pic.jschina.com.cn\/0\/13\/90\/87\/13908735_897765.jpg","http:\/\/pic.jschina.com.cn\/0\/10\/62\/38\/10623825_083426.jpg","http:\/\/images.qianlong.com\/mmsource\/images\/2004\/01\/13\/tywy0112025.jpg","http:\/\/i3.sinaimg.cn\/edu\/2013\/1103\/U3425P42DT20131103120037.jpg","http:\/\/www.hinews.cn\/pic\/0\/12\/93\/06\/12930614_659834.jpg","http:\/\/fj.eastday.com\/hdqxb\/20100316_1\/node404012\/images\/01703605.jpg","http:\/\/img.zjol.com.cn\/pic\/0\/04\/33\/09\/4330975_877341.jpg","http:\/\/i2.ce.cn\/ce\/health\/zlk\/200712\/03\/W020071203404210349010.jpg","http:\/\/news.sznews.com\/images\/attachement\/jpg\/site3\/20101214\/0021856022770e70eff513.jpg","http:\/\/pic.jschina.com.cn\/0\/12\/96\/46\/12964665_991892.jpg","http:\/\/wenhua.youth.cn\/xwjj\/201308\/W020130802613339348646.jpg","http:\/\/img1.qq.com\/cq\/pics\/3524\/3524097.jpg","http:\/\/news.sznews.com\/content\/images\/site3\/20070926\/001558d90baa0863f31740.jpg","http:\/\/tour.jschina.com.cn\/node4033\/images\/00171724.jpg","http:\/\/www.hinews.cn\/pic\/0\/12\/93\/06\/12930618_137373.jpg","http:\/\/img.gmw.cn\/images\/attachement\/jpg\/site2\/20120710\/0023ae634f201165e7fd18.jpg","http:\/\/images.rednet.cn\/articleimage\/2011\/11\/02\/1048294084.jpg","http:\/\/i3.hunantv.com\/p1\/20111229\/1040224327.jpg","http:\/\/images.rednet.cn\/articleimage\/2011\/11\/02\/1048048606.jpg","http:\/\/upload.hbtv.com.cn\/2012\/0823\/1345683179897.jpg","http:\/\/tour.jschina.com.cn\/node4064\/images\/00171722.jpg","http:\/\/images.rednet.cn\/articleimage\/2011\/11\/02\/1047272111.jpg","http:\/\/auto.eastday.com\/epublish\/gb\/paper377\/58\/class037700001\/image\/img948755_3.jpg","http:\/\/upload.hbtv.com.cn\/2013\/0105\/1357348011387.jpg","http:\/\/photocdn.sohu.com\/20060227\/Img227777186.jpg","http:\/\/photocdn.sohu.com\/20051114\/Img240710699.jpg","http:\/\/www.ce.cn\/xwzx\/shgj\/gdxw\/200507\/06\/W020050706331368384367.jpg","http:\/\/digi.tech.qq.com\/images\/ld\/0923\/2\/10.jpg","http:\/\/img001.photo.21cn.com\/photos\/album\/20120812\/o\/CCD9D4FA3726CDCCA3C22CD36E89574C.jpg","http:\/\/photocdn.sohu.com\/20130403\/Img371691282.jpg","http:\/\/enjoy.eastday.com\/epublish\/gb\/paper377\/53\/class037700001\/image\/img924592_3.jpg","http:\/\/img01.e23.cn\/2013\/0711\/20130711094241411.jpg","http:\/\/news.hainan.net\/Editor\/UploadFile07\/2007w11r3f\/2007113103652788.jpg","http:\/\/upload.hbtv.com.cn\/2013\/0105\/1357347719917.jpg","http:\/\/sh.sinaimg.cn\/citylink\/jk\/t_lx\/2011-12-09\/U4818P18T320D45854F9454DT20111209092100.jpg","http:\/\/img1.gtimg.com\/3\/323\/32394\/3239455_980x1200_0.jpg","http:\/\/photocdn.sohu.com\/20091022\/Img267649268.jpg","http:\/\/sports.cctv.com\/20090902\/images\/1251859847753_20819581.jpg","http:\/\/images.rednet.cn\/articleimage\/2011\/11\/02\/1047576243.jpg","http:\/\/news.cctv.com\/20090724\/images\/1248392803571_4a090d23af.jpg","http:\/\/img.gmw.cn\/images\/attachement\/jpg\/site2\/20120104\/0023ae634f20106dfea538.jpg","http:\/\/p3.v.iask.com\/776\/269\/52214604_2.jpg","http:\/\/news.sznews.com\/images\/attachement\/jpg\/site3\/20101214\/0021856022770e70eff412.jpg","http:\/\/photocdn.sohu.com\/20130221\/Img366661437.jpg","http:\/\/news.cnr.cn\/vxjk\/pic\/201203\/W020120327567844127231.jpg","http:\/\/www.sinaimg.cn\/ent\/x\/2007-09-07\/d4c027daa576cecc9e4660b6eaa2d2dd.jpg","http:\/\/photocdn.sohu.com\/20121217\/Img360677207.jpg","http:\/\/images.qianlong.com\/mmsource\/images\/2006\/01\/06\/tyhy20060106012.jpg","http:\/\/pic.jschina.com.cn\/0\/10\/62\/38\/10623820_979246.jpg","http:\/\/images.china.cn\/attachement\/jpg\/site1000\/20110328\/0019b91ed5ee0efa6eab05.jpg","http:\/\/www.zjol.com.cn\/pic\/0\/01\/49\/53\/1495354_992711.jpg","http:\/\/images.rednet.cn\/ArticleImage\/200401\/28115120556.jpg","http:\/\/img1.qq.com\/ent\/pics\/2807\/2807028.jpg","http:\/\/photo.sohu.com\/80\/47\/s_Img210284780.jpg","http:\/\/cimg.163.com\/travel\/2004\/6\/25\/200406250954047141b.jpg","http:\/\/gb.cri.cn\/mmsource\/images\/2006\/10\/26\/ei061026151.jpg","http:\/\/gb.cri.cn\/mmsource\/images\/2010\/12\/21\/31636cf795e84588a5496b14b75e4590.jpg","http:\/\/www.ahtv.cn\/liv_loadfile\/news\/jrgz\/fold96\/1362014108_74700900.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/110616\/2026-11061616130657.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/120220\/10018-12022022155278.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/110817\/573-110qgk64082.jpg","http:\/\/pic9.nipic.com\/20100814\/1304280_131019004058_2.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/120218\/34250-12021Q4234734.jpg","http:\/\/d03.res.meilishuo.net\/pic\/_o\/9a\/76\/ccb22f9aa1f5359c2cbb4d760996_798_915.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/120220\/10018-12022023555243.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/121013\/240425-12101322315794.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/120330\/2028-12033023014630.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/110113\/2376-1101130f31919.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/110120\/1369-11012010063076.jpg","http:\/\/images.enet.com.cn\/2010\/0506\/82\/1228764.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/120220\/10018-12022022523263.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/120220\/10018-12022023251213.jpg","http:\/\/image20.it168.com\/201007_500x375\/148\/fcbd9289fc5a116e.JPG","http:\/\/www.taopic.com\/uploads\/allimg\/110419\/6460-11041910412123.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/121103\/240512-12110300061993.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/130207\/240471-13020F9545715.jpg","http:\/\/f1.online.sh.cn\/images\/attachement\/jpg\/site1\/20100404\/0025116bbfb10d22722939.jpg","http:\/\/ww3.sinaimg.cn\/mw600\/aa65226etw1dxz3lro8fnj.jpg","http:\/\/www.taopic.com\/uploads\/allimg\/110301\/2443-110301202Z011.jpg","http:\/\/img.taopic.com\/uploads\/allimg\/110921\/6348-1109211R60411.jpg"];
+        WeixinApi.imagePreview(picList[0],picList);
+    });
+
+    // 关闭窗口
+    addEvent('closeWindow',function(el,e){
+        // WeixinApi.closeWindow({
+        //     success : function(resp){
+        //         alert('关闭窗口成功！');
+        //     },
+        //     fail : function(resp){
+        //         alert('关闭窗口失败');
+        //     }
+        // });
+        WeixinApi.closeWindow();
+    });
+
+    // 打开扫码
+    addEvent('scanQRCode',function(el,e){
+        WeixinApi.scanQRCode({
+            success : function(resp){
+                alert('扫描器已打开！');
+            },
+            fail : function(resp){
+                alert('扫描器无法打开');
+            }
+        });
+    });
+
+    // 判断是否安装对应的应用（需要官方打开权限）
+    addEvent("getInstallState", function(el, e) {
+        WeixinApi.getInstallState({
+            packageName: "com.ykcloud.pengsi",
+            packageUrl: "http://www.chforce.com/pengsi/PengSi.apk"
+        }, {
+            success: function(resp) {
+                alert("App is installed, version " + resp.version);
+            },
+            fail: function(resp) {
+                alert("Oops, something goes wrong or app is not installed.");
+            }
+        })
+    });
+
+    // 开启Api的debug模式
+    WeixinApi.enableDebugMode();
+
+    // 需要分享的内容，请放到ready里
+    WeixinApi.ready(function(Api) {
+
+        // 微信分享的数据
+        var wxData = {
+            "appId": "", // 服务号可以填写appId
+            "imgUrl" : 'http://www.chforce.com/appframe/uikit/img/120.png',
+            "link" : 'http://www.chforce.com/appframe/uikit/module-weixin.html',
+            "desc" : '想知道微信里面怎么编程和控制信息传播吗？进来你就会知道',
+            "title" : "APPFrame Zen"
+        };
+
+        // 分享的回调
+        var wxCallbacks = {
+            // 分享操作开始之前
+            ready : function() {
+                // 你可以在这里对分享的数据进行重组
+                alert("准备分享");
+            },
+            // 分享被用户自动取消
+            cancel : function(resp) {
+                // 你可以在你的页面上给用户一个小Tip，为什么要取消呢？
+                alert("分享被取消，msg=" + resp.err_msg);
+            },
+            // 分享失败了
+            fail : function(resp) {
+                // 分享失败了，是不是可以告诉用户：不要紧，可能是网络问题，一会儿再试试？
+                alert("分享失败，msg=" + resp.err_msg);
+            },
+            // 分享成功
+            confirm : function(resp) {
+                // 分享成功了，我们是不是可以做一些分享统计呢？
+                alert("分享成功，msg=" + resp.err_msg);
+            },
+            // 整个分享过程结束
+            all : function(resp,shareTo) {
+                // 如果你做的是一个鼓励用户进行分享的产品，在这里是不是可以给用户一些反馈了？
+                alert("分享" + (shareTo ? "到" + shareTo : "") + "结束，msg=" + resp.err_msg);
+            }
+        };
+
+        // 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
+        Api.shareToFriend(wxData, wxCallbacks);
+
+        // 点击分享到朋友圈，会执行下面这个代码
+        Api.shareToTimeline(wxData, wxCallbacks);
+
+        // 点击分享到腾讯微博，会执行下面这个代码
+        Api.shareToWeibo(wxData, wxCallbacks);
+
+        // iOS上，可以直接调用这个API进行分享，一句话搞定
+        Api.generalShare(wxData,wxCallbacks);
+
+        // 有可能用户是直接用微信“扫一扫”打开的，这个情况下，optionMenu、toolbar都是off状态
+        // 为了方便用户测试，我先来trigger show一下
+        // optionMenu
+        var elOptionMenu = document.getElementById('optionMenu');
+        elOptionMenu.click(); // 先隐藏
+        elOptionMenu.click(); // 再显示
+
+        // toolbar
+        var elToolbar = document.getElementById('toolbar');
+        elToolbar.click(); // 先隐藏
+        elToolbar.click(); // 再显示
+
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>机构主页</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body>
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="demo-pengsi-showrule.html">
+                    <i class="icon icon-back"></i>
+                    <span>活动规则</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">机构主页</span>
+        </div>
+    </div>
+    <div class="ui-page-toolbar ui-hide appdown">
+        <div class="appdown-img"><img src="./img/120.png" alt=""></div>
+        <div class="appdown-txt">
+            <h4>捧丝儿 - 捧主题娱乐社交平台</h4>
+            <p>爱我，就捧我</p>
+        </div>
+        <button id="appdown-btn">下载/打开</button>
+    </div>
+    
+<!-- scroll view start -->
+    <style stype="text/css">
+    .pos-re {position: relative;}.full{width:100%;}
+    .pos-right {text-align: right;}
+    .ui-list-company {
+        max-height: 120px;
+    }
+    .ui-list-company-thumb {
+        width: 50px;
+        margin: 7px 15px 7px 0;
+        height: 50px;
+        position: relative;
+    }
+    .ui-list-company-thumb img {
+      width:100%;
+      border-radius: 0.4em;
+    }
+    .ui-list-company-info h4{
+      font-size: 16px;
+      font-weight:500;
+      color: #282828;
+      padding: 1px 0px 5px 0px;
+    }
+    .ui-list-company-info h4 img,.ui-custom-alumb h4 img,.ui-custom-alumb p img{
+      width:18px;height:18px;vertical-align: top;padding-left: 4px;
+    }
+    .ui-list-show {
+        background-color: #ffffff;
+        margin: 15px 0;
+        white-space: normal;
+        position: relative;
+        padding-bottom: 5px;
+    }
+    .ui-list-show-flag {
+        width:30px;
+        height:30px;
+        position: absolute;
+        top:0px;
+        left:0px;
+        background: #f00;
+        color:#fff;
+        font-size: 18px;
+        z-index:4;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        text-align: center;
+        border-bottom-right-radius: 0.5em;
+    }
+    .ui-list-show-flag.hot{
+        background: #f00;
+    }
+    .ui-list-show-flag.new {
+        background: #4b6;
+    }
+    .ui-list-show-flag.recommend {
+        background: #08f;
+    }
+    .ui-list-show-item h4{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight:500;
+        color: #282828;
+        padding-left: 5px;
+    }
+    .ui-list-show-item p {text-align: left;color: #808080;font-size: 14px;padding: 2px 5px;}
+    .ui-list-show-item p img {width:14px;height:14px;vertical-align: middle;padding-left: 5px;padding-right: 5px;}
+    .ui-list-show-item p span { }
+    .ui-list-show-item p .danger { color:red;}
+    </style>
+    <!-- 海报 -->
+    <div class="ui-grid-row">
+        <img src="http://sns.pengsi.cn/images/default/bg.jpg" class="col-100"/>
+    </div>
+    <!-- /海报 -->
+    <!-- 机构缩略信息 -->
+    <ul class="ui-list ui-border-tb">
+        <li class="ui-border-t ui-list-item-link ui-tapable" data-target="demo-pengsi-comprofile.html">
+            <div class="ui-list-company-thumb">
+               <img class="lazyload" data-original="http://file.pengsi.cn/user/portrait/26/42/12/124226/m.jpg"/>
+            </div>
+            <div class="ui-list-info ui-list-company-info">
+                <h4>和光印象
+                    <img src="./img/ico-verify-rz-company@2x.png" alt="">
+                </h4>
+                <p>机构全称：和光印象摄影工作室</p>
+            </div>
+        </li>
+    </ul>
+    <!-- / 机构缩略信息 -->
+    <!-- 发布活动列表 -->
+    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/87/02/10/100287/l.jpg">
+        <i class="ui-list-show-flag hot">热</i>
+        <div class="ui-list-show-item">
+            <h4>电视剧《超级梦想家》女演员招募</h4>
+            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span>7天后结束</span></p>
+        </div>
+    </div>
+    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/79/02/10/100279/l.jpg">
+        <i class="ui-list-show-flag new">新</i>
+        <div class="ui-list-show-item">
+            <h4>和光印象女神甄选</h4>
+            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span>6天后结束</span></p>
+        </div>
+    </div>
+    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/84/02/10/100284/l.jpg">
+        <i class="ui-list-show-flag recommend">荐</i>
+        <div class="ui-list-show-item">
+            <h4>公益电影《北京 北京》女演员招募</h4>
+            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span>5天后结束</span></p>
+        </div>
+    </div>
+    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/82/02/10/100282/l.jpg">
+        <div class="ui-list-show-item">
+            <h4>院线电影《36选7》女演员招募</h4>
+            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span>4天后结束</span></p>
+        </div>
+    </div>
+    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/75/02/10/100275/l.jpg">
+        <div class="ui-list-show-item">
+            <h4>拜托拜托，带我回家吧。</h4>
+            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span class="danger">3天后结束</span></p>
+        </div>
+    </div>
+    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/44/02/10/100244/l.jpg">
+        <div class="ui-list-show-item">
+            <h4>《我为喜剧狂》官方报名</h4>
+            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span class="danger">2天后结束</span></p>
+        </div>
+    </div>
+    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/80/02/10/100280/l.jpg">
+        <div class="ui-list-show-item">
+            <h4>电视剧《青春的旗帜》女演员招募</h4>
+            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span class="danger">1天后结束</span></p>
+        </div>
+    </div>
+    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/70/02/10/100270/l.jpg">
+        <div class="ui-list-show-item">
+            <h4>电视剧《后青春时代》女演员招募</h4>
+            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span>已经结束</span></p>
+        </div>
+    </div>
+    <!-- / 发布活动列表 -->
+<!-- /scroll view end -->
+
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("body").autoapp({app : {
+                ios: {
+                    url:"https://itunes.apple.com/cn/app/peng-si-er/id672299307?mt=8",
+                    enter: "pengsi://portalrank?0"
+                },
+                android: {
+                    //'url': null,
+                    url : "http://www.chforce.com/pengsi/PengSi.apk",
+                    enter: "pengsi://portalrank?0"
+                },btn : "#appdown-btn"
+            }});
+            $(".lazyload").lazyLoad();
+        });
+    </script>   
+</body>
+</html>

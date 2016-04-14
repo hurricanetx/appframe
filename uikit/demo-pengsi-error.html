@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>内容不存在 404</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body>
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="demo-pengsi.html">
+                    <i class="icon icon-back"></i>
+                    <span>捧丝儿</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">内容不存在</span>
+        </div>
+    </div>
+    <style>
+    .infopage {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        text-align: center;
+        position: absolute;
+        top:0px;
+        z-index:1;
+    }
+    .infopage .ui-notice{
+        width:100%;
+    }
+    .ui-btn-wrap-p{
+        width:80%;
+    }
+    .ui-btn-pengsi{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        border: 0 none;
+        color: #282828;
+        background-color: #fd2;
+        background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.38,#fd2),to(##fe802d));
+        vertical-align: top;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+        -webkit-box-sizing: border-box;
+        border: 1px solid #fd2;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        font-size: 18px;
+        height: 44px;
+        line-height: 42px;
+        display: block;
+        border-radius: 5px;
+        padding: 0 13px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    </style>
+    <div class="infopage">
+        <section class="ui-notice">
+              <br/><br/>
+              <i></i>
+              <p>内容不存在 或者 已被删除<br/></p>
+              <br/><br/>
+              <br/><br/>
+              <div class="ui-btn-wrap-p ui-grid-row">
+                  <button class="ui-btn-pengsi col-50" onclick="location.href='http://m.pengsi.cn'">其它活动</button>
+                  <button class="ui-btn-pengsi col-50" onclick="location.href='demo-pengsi-appdown.html'">下载捧丝儿</button>
+              </div>
+        </section>
+    </div>
+    
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+    });
+    </script>  
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-dragdrop</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">元素拖放</span>
+        </div>
+    </div>
+    <style>
+    .dropable li{
+        cursor: move;
+    }
+    </style>
+    <ul class="ui-list ui-list-text ui-border-tb dropable">
+        <li class="ui-border-t">
+            <p>元素1：苹果</p>
+        </li>
+        <li class="ui-border-t">
+            <p>元素2：香蕉</p>
+        </li>
+        <li class="ui-border-t">
+            <p>元素3：橘子</p>
+        </li>
+        <li class="ui-border-t">
+            <p>元素4：西瓜</p>
+        </li>
+    </ul>
+    <div class="ui-panel">
+        未完成，有很多bug
+    </div>
+    <script type="text/javascript" src="../assets/module/zepto.dragdrop.js"></script>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+        $('ul.dropable li').draggable({
+            start: function () {
+                this.css({position:"absolute"});
+            },
+            stop: function () {
+                this.css({position:null,left:null,top:null,display:null});
+            }
+        }).droppable({
+            drop: function (e, dragEl, dropEl) {
+                console.log("drop");
+                dropEl.before(dragEl);
+                return true;
+            }
+        });
+    });
+    </script>  
+</body>
+</html>

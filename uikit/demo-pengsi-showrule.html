@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>捧丝儿活动规则</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body>
+    <div class="ui-page">
+        <div class="ui-page-navbar ui-hide">
+            <div class="ui-page-inner">
+                <span class="ui-navbar-left ui-operate">
+                    <a href="demo-pengsi-show.html">
+                        <i class="icon icon-back"></i>
+                        <span>活动详情</span>
+                    </a>
+                </span>
+                <span class="ui-navbar-center ui-navbar-text">活动规则</span>
+            </div>
+        </div>
+        <div class="ui-page-toolbar ui-hide appdown">
+            <div class="appdown-img"><img src="./img/120.png" alt=""></div>
+            <div class="appdown-txt">
+                <h4>捧丝儿 - 捧主题娱乐社交平台</h4>
+                <p>爱我，就捧我</p>
+            </div>
+            <button id="appdown-btn">下载/打开</button>
+        </div>
+        <div class="ui-layout">
+            <div class="ui-view-scroll">
+            <!-- scroll view start -->
+                <h4 class="ui-block-title">主办方</h4>
+                <ul class="ui-list ui-list-text ui-border-tb">
+                    <li class="ui-border-t ui-list-item-link ui-tapable" data-target="demo-pengsi-companypage.html">
+                        <p>北京星光闪闪各种明星牛逼公司</p>
+                    </li>
+                </ul>
+
+                <h4 class="ui-block-title">活动编号(ID)</h4>
+                <ul class="ui-list ui-list-text ui-border-tb">
+                    <li class="ui-border-t ui-list-item-link ui-tapable" data-target="demo-pengsi-showqrcode.html">
+                        <p>999999 (点击：生成二维码)</p>
+                    </li>
+                </ul>
+
+                <h4 class="ui-block-title">入围条件</h4>
+                <ul class="ui-list ui-list-text ui-border-tb">
+                    <li class="ui-border-t">
+                        <p>按<em>票值</em>排名前<em>200</em>名入围</p>
+                    </li>
+                </ul>
+
+                <h4 class="ui-block-title">活动介绍</h4>
+                <div class="ui-panel ui-article-auto">
+                    <h2>主创信息</h2>
+                    <table>
+                        <tr><td>题材</td><td>喜剧 / 爱情</td></tr>
+                        <tr><td>出品方</td><td>中诚影视文化有限公司</td></tr>
+                        <tr><td>导演/编剧</td><td>待付款</td></tr>
+                        <tr><td>主演</td><td>陈小春/安以轩/刘烨</td></tr>
+                        <tr><td>首映地点</td><td>北京蓝色港湾传奇时代影城</td></tr>
+                        <tr><td>首映时间</td><td>2014.8.14（暂定）</td></tr>
+                    </table>
+                    <h2>预告片</h2>
+                    <p><iframe class="video_iframe" style="z-index: 1; overflow: hidden;" height="200" width="300" frameborder="0" src="http://v.qq.com/iframe/player.html?vid=v0139xcfue3&amp;width=300&amp;height=200&amp;auto=0" allowfullscreen="" scrolling="no"></iframe></p>
+                    <h2>活动主题</h2>
+                    <p>加入他的捧丝儿团</p>
+                    <h2>活动奖励</h2>
+                    <p><span style="font-family:'Arial Narrow', 'Arial';">加入任意一方【捧丝儿团】即送【50捧金】红包</span></p><p><span style="font-family:'Arial Narrow', 'Arial';">红包共计1000个，派完为止</span></p><p><span style="font-family:'Arial Narrow', 'Arial';">活动结束后统一随机派送</span></p>
+                </div>
+            <!-- /scroll view end -->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".ui-page").autoapp({app : {
+                ios: {
+                    url:"https://itunes.apple.com/cn/app/peng-si-er/id672299307?mt=8",
+                    enter: "pengsi://portalrank?0"
+                },
+                android: {
+                    //'url': null,
+                    url : "http://www.chforce.com/pengsi/PengSi.apk",
+                    enter: "pengsi://portalrank?0"
+                },btn : "#appdown-btn"
+            }});
+        });
+    </script> 
+</body>
+</html>

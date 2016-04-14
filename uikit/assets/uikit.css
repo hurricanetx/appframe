@@ -1,0 +1,422 @@
+/*
+ * 自动固定位置
+ */
+.ui-view-autofix-top {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+/*
+ * ui-list-comment,ui-list-userinfo
+*/
+.ui-list-comment {
+
+}
+.ui-list-comment-thumb {
+  padding:15px 0px 15px 15px;
+}
+.ui-list-comment-thumb img {
+  width:100%;
+  border-radius: 0.4em;
+}
+.ui-list-comment-info {
+  padding: 15px 15px 15px 0px;
+}
+.ui-list-comment-info h4{
+  font-size: 16px;
+  font-weight:500;
+  color: #359;
+  padding: 1px 0px 5px 0px;
+}
+.ui-list-comment-info h4 img{
+  width:18px;height:18px;vertical-align: top;padding-left: 4px;
+}
+.ui-list-comment-info h4 span ,.ui-list-comment-info p{
+  color:#808080;
+  font-size: 14px;
+  
+}
+.ui-list-comment-info h4 span {float: right;}
+/*
+ * tabview slide 
+*/
+.ui-tab-slide {
+  
+}
+.ui-tab-slide-item {
+  display: none;
+}
+.ui-tab-slide-item.current {
+  display: block;
+}
+/*
+ * Range 组件样式
+ */
+input[type="range"] {
+   width: 100%;
+}
+
+.ui-range {
+   position: relative;
+}
+.ui-range input {
+   position: absolute;
+   text-align: left;
+   direction: ltr;
+   left: -9999px;
+}
+
+/* legend */
+.ui-range .legend {
+   font-size: 16px;
+   position: absolute;
+   top: -25px;
+   left: 0;
+   right: 0;
+   z-index: 1;
+}
+.ui-range .legend .label {
+   padding-top: 55px;
+   float: left;
+   text-align: center;
+   height: 30px;
+   line-height: 30px;
+}
+.ui-range .legend .label:first-child {
+   text-align: left;
+}
+.ui-range .legend .label:last-child {
+   text-align: right;
+}
+
+.ui-range .legend .label:empty {
+   position: relative;
+}
+.ui-range .legend .label:empty:before {
+   content: '';
+   position: absolute;
+   width: 1px;
+   top: 62px; left: 50%; bottom: 7px;
+   background: #CCC;
+   border-left: 1px solid white;
+}
+.ui-range .legend .label:empty:first-child:before {
+   left: 14px; /* btn half size */
+}
+.ui-range .legend .label:empty:last-child:before {
+   left: auto;
+   right: 14px; /* btn half size */
+}
+
+.ui-range .legend .label.active {
+   -webkit-transition: 0.2s all ease-out;
+      -moz-transition: 0.2s all ease-out;
+        -o-transition: 0.2s all ease-out;
+           transition: 0.2s all ease-out;
+
+   color: rgb(0,122, 255);
+}
+
+/* bar, fill, btn */
+.ui-range .bar,
+.ui-range .fill {
+   -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+           border-radius: 2px;
+   height: 3px;
+}
+.ui-range .bar {
+   position: relative;
+   margin-top: 50px;
+   margin-bottom: 100px;
+   margin-left: 14px; /* btn half size  */
+   margin-right: 14px; /* btn half size */
+   background: #999;
+   border-bottom: 1px solid rgba(255, 255, 255, .9);
+}
+.ui-range .fill {
+   background: rgba(0,122, 255, 1);
+   position: absolute;
+   top: 0; left: 0;
+}
+.ui-range .btn {
+   margin-top: -14px;
+   position: absolute;
+   top: 0; left: -14px; /* btn half size */
+   width: 28px;
+   height: 28px;
+   z-index: 2;
+
+   -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+           border-radius: 50%;
+
+   border: 1px solid rgba(255, 255, 255, .8);
+
+   background: #fff;
+   
+   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        -o-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.ui-range .btn:active {
+   border-color: rgba(255, 255, 255, .5);
+   top: 1px;
+   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+        -o-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */
+
+.ui-range.inside .bar{
+   margin-left: 0;
+   margin-right: 0;
+}
+.ui-range.inside .btn {
+   left: 0;
+}
+.ui-range.inside .fill {
+   padding-right: 14px; /* btn half size */
+}
+
+/* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */
+
+.ui-range .fill,
+.ui-range .btn {
+   -webkit-transition: 0.2s all ease-out;
+      -moz-transition: 0.2s all ease-out;
+        -o-transition: 0.2s all ease-out;
+           transition: 0.2s all ease-out;
+}
+.ui-range.moving .fill,
+.ui-range.moving .btn {
+   -webkit-transition: none;
+      -moz-transition: none;
+        -o-transition: none;
+           transition: none;
+}
+/*
+ * 捧丝儿项目 独有的样式
+ */
+.ui-tag.pengsi ul {padding-left:10px;}
+.ui-tab.pengsi li.current {color:#282828;border-bottom:3px solid #fd2;}
+.ui-tab-slide-item.pengsi {padding: 15px;}
+.pengsi-faceitem {
+  position: relative;
+}
+.pengsi-faceitem img {
+  width:100%;
+  border-radius: 0.4em;
+}
+.pengsi-info-b {
+  width:100%;
+  height:22px;
+  color:#fff;
+  font-size: 16px;
+  padding: 1px 0px;
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  bottom: 5px;
+  border-bottom-right-radius: 0.4em;
+  border-bottom-left-radius: 0.4em;
+}
+.pengsi-info-b img{
+  width:18px;height:18px;vertical-align: middle;padding-left: 4px;
+}
+@media all and (min-width: 768px){
+  .pengsi-faceitem img {
+    width:100%;
+    border-radius: 1em;
+  }
+  .pengsi-info-b {
+    width:100%;
+    height:36px;
+    color:#fff;
+    font-size: 32px;
+    padding: 6px 0px;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    bottom: 5px;
+    border-bottom-right-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+  }
+  .pengsi-info-b img{
+    width:36px;height:36px;vertical-align: middle;padding-left: 8px;
+  }
+}
+/*
+ * appdown
+ */
+ .appdown{
+     color:#ffffff;
+     text-align: left;
+     background: rgba(0,0,0,.8);
+ }
+ .appdown-img {
+     width: 36px;
+     height: 36px;
+     padding: 4px;
+     float: left;
+ }
+ .appdown-img img{width:36px;height:36px;}
+ .appdown-txt {
+     padding: 4px;
+ }
+ .appdown-txt h4 {
+     font-size: 14px;
+     inline-height:16px;
+ }
+ .appdown-txt p {
+     font-size: 12px;
+ }
+ #appdown-btn {
+     height: 30px;
+     line-height: 30px;
+     padding: 0 13px;
+     min-width: 56px;
+     background: #fd2;
+     color:#282828;
+     position: absolute;
+     top: 8px;
+     right: 4px;
+     border:none;
+     border-radius: 4px;
+ }
+#appdown-btn.disabled {
+  background: #c0c0c0;
+}
+/*
+ * app 组件样式
+ * 组件名：app导航栏 和 工具栏
+ */
+.ui-ex-minheight200 {min-height: 200px;}
+.ui-list-info-ext h4 { overflow:visible; }
+.ui-block-title {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #6d6d72;
+    margin: 35px 15px 10px;
+}
+/*
+ * app code view
+ */
+pre.ui-module-code {
+    background-color: #ffffff;
+    font-size: 13px;
+    line-height: 19px;
+    margin: 7px 0;
+    overflow: hidden;
+    padding: 6px 10px;
+    white-space: pre;
+}
+pre.ui-module-code:before {
+    content: "代码：";
+    color: #999;
+}
+pre code ,xmp.ui-module-code {
+    display: block; padding: 0.5em;
+    background: #f0f0f0; 
+    border-radius: 3px 3px 3px 3px;
+    color: rgba(0, 0, 0, 0.75);
+    overflow: auto;
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .doctype,
+pre .pi,
+pre .lisp .string,
+pre .javadoc {
+  color: #93a1a1;
+  font-style: italic;
+}
+
+pre .keyword,
+pre .winutils,
+pre .method,
+pre .addition,
+pre .css .tag,
+pre .request,
+pre .status,
+pre .nginx .title {
+  color: #859900;
+}
+
+pre .number,
+pre .command,
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula,
+pre .regexp,
+pre .hexcolor {
+  color: #2aa198;
+}
+
+pre .title,
+pre .localvars,
+pre .chunk,
+pre .decorator,
+pre .built_in,
+pre .identifier,
+pre .vhdl .literal,
+pre .id {
+  color: #268bd2;
+}
+
+pre .attribute,
+pre .variable,
+pre .lisp .body,
+pre .smalltalk .number,
+pre .constant,
+pre .class .title,
+pre .parent,
+pre .haskell .type {
+  color: #b58900;
+}
+
+pre .preprocessor,
+pre .preprocessor .keyword,
+pre .shebang,
+pre .symbol,
+pre .symbol .string,
+pre .diff .change,
+pre .special,
+pre .attr_selector,
+pre .important,
+pre .subst,
+pre .cdata,
+pre .clojure .title {
+  color: #cb4b16;
+}
+
+pre .deletion {
+  color: #dc322f;
+}
+
+pre .tex .formula {
+  background: #eee8d5;
+}
+/*
+ * 示例中 边框样式
+ */
+.border-list li {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #FDFDE7;
+}

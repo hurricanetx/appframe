@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-flickable</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+  <div class="ui-page-navbar ui-hide">
+      <div class="ui-page-inner">
+          <span class="ui-navbar-left ui-operate">
+              <a href="module-flickable.html">
+                  <i class="icon icon-back"></i>
+                  <span>Flickable</span>
+              </a>
+          </span>
+          <span class="ui-navbar-center ui-navbar-text">翻转卡片</span>
+      </div>
+  </div>
+  <style>
+  #demo1-wrapper {
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+  }
+  #demo1 {
+    width: 1600px;
+    height: 480px;
+    -webkit-perspective: 1000;
+  }
+  .card, .front, .back {
+    border-radius: 10px;
+    color: #fff;
+    float: left;
+    height: 440px;
+    line-height: 440px;
+    margin: 10px;
+    position: relative;
+    padding: 0;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .front, .back {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .back {
+    color: #fff;
+    -webkit-transform: rotateY(180deg) translate3d(0,0,0);
+    background: url(img/test/fabric.png);
+  }
+  
+  .card {
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation-name: default;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+  }
+  
+  .card.flipped {
+    -webkit-animation-name: cardflipped;
+  }
+  
+
+  #card1 .front { color: #000; }  
+  #card2 .front { background: #B00004; }
+  #card3 .front { background: #1C8B00; }
+  #card4 .front { background: #FF9500; }
+  #card5 .front { background: #3A8AD5; }
+  
+  @-webkit-keyframes default { 
+    from  { -webkit-transform: rotateY(180deg) translate3d(0,0,0); }
+    to    { -webkit-transform: rotateY(0deg) translate3d(0,0,0); }
+  }
+
+  @-webkit-keyframes cardflipped { 
+    from  { -webkit-transform: rotateY(0deg) translate3d(0,0,0); }
+    to    { -webkit-transform: rotateY(180deg) translate3d(0,0,0); }
+  }
+  </style>
+  <h3 class="ui-block-title">Demo 1: Flicking between screens</h3>
+  <div class="ui-panel">
+      <p>This demo allows you to swipe between 'cards' within a set area. Tap a card to flip it around (flipping cards works only in webkit browsers).</p>
+  </div>
+  <div id="demo1-wrapper">
+  <div id="demo1" class="clearfix">
+  
+    <!-- Card 1 -->
+    <div class="card" id="card1">
+      <div class="front">Tap to flip</div>
+      <div class="back">Tap to flip</div>
+    </div>
+    
+    
+    <!-- Card 2 -->
+    <div class="card" id="card2">
+      <div class="front">Tap to flip</div>
+      <div class="back">Tap to flip</div>
+    </div>
+    
+    
+    <!-- Card 3 -->
+    <div class="card" id="card3">
+      <div class="front">Tap to flip</div>
+      <div class="back">Tap to flip</div>
+    </div>
+    
+    
+    <!-- Card 4 -->
+    <div class="card" id="card4">
+      <div class="front">Tap to flip</div>
+      <div class="back">Tap to flip</div>
+    </div>
+    
+    <!-- Card 5 -->
+    <div class="card" id="card5">
+      <div class="front">Tap to flip</div>
+      <div class="back">Tap to flip</div>
+    </div>
+  
+  </div>
+  </div>
+  <script type="text/javascript" src="../assets/module/zepto.fx.min.js"></script>
+  <script type="text/javascript" src="../assets/module/effect.flickable.min.js"></script>
+  <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+      $("body").autoapp();
+      $('#demo1').flickable({segments:5});
+      $('.front, .back').tap(function() {
+        var el = $(this).parent();
+        el.toggleClass('flipped')
+      });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-tab</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy ui-toolbar-through">
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">组件库 - 标签(tab)</span>
+        </div>
+    </div>
+    <style>
+    .pos-re {position: relative;}.full{width:100%;}
+    .pos-right {text-align: right;}
+    .ui-tab.example {background: #282828;color:#f0f0f0;}
+    .ui-tab.example li{border-top:3px solid #282828;border-bottom:0px;}
+    .ui-tab.example li.current {color:#ffffff;border-top:3px solid #fd2;border-bottom:0px;}
+    .ui-list-show {
+        background-color: #ffffff;
+        margin: 15px 0;
+        white-space: normal;
+        position: relative;
+        padding-bottom: 5px;
+    }
+    .ui-list-show-flag {
+        width:30px;
+        height:30px;
+        position: absolute;
+        top:0px;
+        left:0px;
+        background: #f00;
+        color:#fff;
+        font-size: 18px;
+        z-index:4;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        text-align: center;
+        border-bottom-right-radius: 0.5em;
+    }
+    .ui-list-show-flag.hot{
+        background: #f00;
+    }
+    .ui-list-show-flag.new {
+        background: #4b6;
+    }
+    .ui-list-show-flag.recommend {
+        background: #08f;
+    }
+    .ui-list-show-item h4{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight:500;
+        color: #282828;
+        padding-left: 5px;
+    }
+    .ui-list-show-item p {text-align: left;color: #808080;font-size: 14px;padding: 2px 5px;}
+    .ui-list-show-item p img {width:14px;height:14px;vertical-align: middle;padding-left: 5px;padding-right: 5px;}
+    .ui-list-show-item p span { }
+    .ui-list-show-item p .danger { color:red;}
+    .ui-tab-slide-item.example {padding: 15px;}
+    </style>
+    <div id="showContainer">
+        <nav class="ui-tab ui-border-b ui-page-toolbar example">
+            <ul>
+                <li class="current">排行榜</li>
+                <li>活动</li>
+                <li>发现</li>
+                <li>我</li>
+            </ul>
+        </nav>
+        <div class="ui-tab-slide">
+            <div class="ui-tab-slide-item current">
+                <div class="ui-panel ui-panel-re ui-ex-minheight200">
+                    <section class="ui-notice ui-notice-news">
+                        <i></i>
+                        <p>暂时没有新消息</p>
+                    </section>
+                </div>
+            </div>
+            <div class="ui-tab-slide-item">
+                <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+                        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/87/02/10/100287/l.jpg">
+                        <i class="ui-list-show-flag hot">热</i>
+                        <div class="ui-list-show-item">
+                            <h4>电视剧《超级梦想家》女演员招募</h4>
+                            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span>7天后结束</span></p>
+                        </div>
+                    </div>
+                    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+                        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/79/02/10/100279/l.jpg">
+                        <i class="ui-list-show-flag new">新</i>
+                        <div class="ui-list-show-item">
+                            <h4>和光印象女神甄选</h4>
+                            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span>6天后结束</span></p>
+                        </div>
+                    </div>
+                    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+                        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/84/02/10/100284/l.jpg">
+                        <i class="ui-list-show-flag recommend">荐</i>
+                        <div class="ui-list-show-item">
+                            <h4>公益电影《北京 北京》女演员招募</h4>
+                            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span>5天后结束</span></p>
+                        </div>
+                    </div>
+                    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+                        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/82/02/10/100282/l.jpg">
+                        <div class="ui-list-show-item">
+                            <h4>院线电影《36选7》女演员招募</h4>
+                            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span>4天后结束</span></p>
+                        </div>
+                    </div>
+                    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+                        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/75/02/10/100275/l.jpg">
+                        <div class="ui-list-show-item">
+                            <h4>拜托拜托，带我回家吧。</h4>
+                            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span class="danger">3天后结束</span></p>
+                        </div>
+                    </div>
+                    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+                        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/44/02/10/100244/l.jpg">
+                        <div class="ui-list-show-item">
+                            <h4>《我为喜剧狂》官方报名</h4>
+                            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span class="danger">2天后结束</span></p>
+                        </div>
+                    </div>
+                    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+                        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/80/02/10/100280/l.jpg">
+                        <div class="ui-list-show-item">
+                            <h4>电视剧《青春的旗帜》女演员招募</h4>
+                            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span class="danger">1天后结束</span></p>
+                        </div>
+                    </div>
+                    <div class="ui-list-show ui-border-tb ui-tapable" data-target="demo-pengsi-show.html">
+                        <img class="lazyload full" data-original="http://file.pengsi.cn/show/image/70/02/10/100270/l.jpg">
+                        <div class="ui-list-show-item">
+                            <h4>电视剧《后青春时代》女演员招募</h4>
+                            <p><span>参与人数：9999</span><img src="./img/Time02@2X.png" alt=""><span>已经结束</span></p>
+                        </div>
+                    </div>
+            </div>
+            <div class="ui-tab-slide-item">
+                <div class="ui-panel ui-border-tb">
+<p><strong>独家捧主题娱乐社交平台。</strong>当大家都在关注明星的时候，捧丝儿只为新人代言。</p><br/>
+<p>捧丝儿倡导：<strong>捧，就是爱与支持，爱我，就捧我！</strong></p><br/>
+<p>捧丝儿开创全新的捧理念、捧机制，让演艺人才与捧丝儿（喜爱TA们、支持TA们的人）进行实效的娱乐互动。</p><br/>
+<p>捧丝儿的用户遍布中国的影视娱乐行业，以星探的姿态，为行业发现下一个STAR。捧丝儿，每年见证成百上千个剧组、赛事通过平台成功选拔无数演员、模特与歌手。</p><br/>
+<p>平台已获得上百位明星导师支持，逾百家影视机构合作，覆盖全国近百所艺术院校，囊括国内90％影视娱乐行业人士。</p><br/>
+<p>如果你关注新人成长，我们愿与你海边观潮，用一捧捧真挚的爱，滋养、孵化TA们，共同见证TA们的星路历程。</p><br/>
+<p>如果你是演艺新人，我们愿搭建一个平台，助你龙门一跃。</p><br/>
+<p>如果你是影视剧组或是企业商家，我们愿与你一起号召大众，为你孵化出你想要的才子佳人。同时你的品牌也必将深入人心，万人瞩目！</p><br/>
+<p><strong>你，准备好了吗？</strong></p>
+<p><strong>独家捧主题娱乐社交平台。</strong>当大家都在关注明星的时候，捧丝儿只为新人代言。</p><br/>
+<p>捧丝儿倡导：<strong>捧，就是爱与支持，爱我，就捧我！</strong></p><br/>
+<p>捧丝儿开创全新的捧理念、捧机制，让演艺人才与捧丝儿（喜爱TA们、支持TA们的人）进行实效的娱乐互动。</p><br/>
+<p>捧丝儿的用户遍布中国的影视娱乐行业，以星探的姿态，为行业发现下一个STAR。捧丝儿，每年见证成百上千个剧组、赛事通过平台成功选拔无数演员、模特与歌手。</p><br/>
+<p>平台已获得上百位明星导师支持，逾百家影视机构合作，覆盖全国近百所艺术院校，囊括国内90％影视娱乐行业人士。</p><br/>
+<p>如果你关注新人成长，我们愿与你海边观潮，用一捧捧真挚的爱，滋养、孵化TA们，共同见证TA们的星路历程。</p><br/>
+<p>如果你是演艺新人，我们愿搭建一个平台，助你龙门一跃。</p><br/>
+<p>如果你是影视剧组或是企业商家，我们愿与你一起号召大众，为你孵化出你想要的才子佳人。同时你的品牌也必将深入人心，万人瞩目！</p><br/>
+<p><strong>你，准备好了吗？</strong></p>
+<p><strong>独家捧主题娱乐社交平台。</strong>当大家都在关注明星的时候，捧丝儿只为新人代言。</p><br/>
+<p>捧丝儿倡导：<strong>捧，就是爱与支持，爱我，就捧我！</strong></p><br/>
+<p>捧丝儿开创全新的捧理念、捧机制，让演艺人才与捧丝儿（喜爱TA们、支持TA们的人）进行实效的娱乐互动。</p><br/>
+<p>捧丝儿的用户遍布中国的影视娱乐行业，以星探的姿态，为行业发现下一个STAR。捧丝儿，每年见证成百上千个剧组、赛事通过平台成功选拔无数演员、模特与歌手。</p><br/>
+<p>平台已获得上百位明星导师支持，逾百家影视机构合作，覆盖全国近百所艺术院校，囊括国内90％影视娱乐行业人士。</p><br/>
+<p>如果你关注新人成长，我们愿与你海边观潮，用一捧捧真挚的爱，滋养、孵化TA们，共同见证TA们的星路历程。</p><br/>
+<p>如果你是演艺新人，我们愿搭建一个平台，助你龙门一跃。</p><br/>
+<p>如果你是影视剧组或是企业商家，我们愿与你一起号召大众，为你孵化出你想要的才子佳人。同时你的品牌也必将深入人心，万人瞩目！</p><br/>
+<p><strong>你，准备好了吗？</strong></p>
+<p><strong>独家捧主题娱乐社交平台。</strong>当大家都在关注明星的时候，捧丝儿只为新人代言。</p><br/>
+<p>捧丝儿倡导：<strong>捧，就是爱与支持，爱我，就捧我！</strong></p><br/>
+<p>捧丝儿开创全新的捧理念、捧机制，让演艺人才与捧丝儿（喜爱TA们、支持TA们的人）进行实效的娱乐互动。</p><br/>
+<p>捧丝儿的用户遍布中国的影视娱乐行业，以星探的姿态，为行业发现下一个STAR。捧丝儿，每年见证成百上千个剧组、赛事通过平台成功选拔无数演员、模特与歌手。</p><br/>
+<p>平台已获得上百位明星导师支持，逾百家影视机构合作，覆盖全国近百所艺术院校，囊括国内90％影视娱乐行业人士。</p><br/>
+<p>如果你关注新人成长，我们愿与你海边观潮，用一捧捧真挚的爱，滋养、孵化TA们，共同见证TA们的星路历程。</p><br/>
+<p>如果你是演艺新人，我们愿搭建一个平台，助你龙门一跃。</p><br/>
+<p>如果你是影视剧组或是企业商家，我们愿与你一起号召大众，为你孵化出你想要的才子佳人。同时你的品牌也必将深入人心，万人瞩目！</p><br/>
+<p><strong>你，准备好了吗？</strong></p>
+<p><strong>独家捧主题娱乐社交平台。</strong>当大家都在关注明星的时候，捧丝儿只为新人代言。</p><br/>
+<p>捧丝儿倡导：<strong>捧，就是爱与支持，爱我，就捧我！</strong></p><br/>
+<p>捧丝儿开创全新的捧理念、捧机制，让演艺人才与捧丝儿（喜爱TA们、支持TA们的人）进行实效的娱乐互动。</p><br/>
+<p>捧丝儿的用户遍布中国的影视娱乐行业，以星探的姿态，为行业发现下一个STAR。捧丝儿，每年见证成百上千个剧组、赛事通过平台成功选拔无数演员、模特与歌手。</p><br/>
+<p>平台已获得上百位明星导师支持，逾百家影视机构合作，覆盖全国近百所艺术院校，囊括国内90％影视娱乐行业人士。</p><br/>
+<p>如果你关注新人成长，我们愿与你海边观潮，用一捧捧真挚的爱，滋养、孵化TA们，共同见证TA们的星路历程。</p><br/>
+<p>如果你是演艺新人，我们愿搭建一个平台，助你龙门一跃。</p><br/>
+<p>如果你是影视剧组或是企业商家，我们愿与你一起号召大众，为你孵化出你想要的才子佳人。同时你的品牌也必将深入人心，万人瞩目！</p><br/>
+<p><strong>你，准备好了吗？</strong></p>
+<p><strong>独家捧主题娱乐社交平台。</strong>当大家都在关注明星的时候，捧丝儿只为新人代言。</p><br/>
+<p>捧丝儿倡导：<strong>捧，就是爱与支持，爱我，就捧我！</strong></p><br/>
+<p>捧丝儿开创全新的捧理念、捧机制，让演艺人才与捧丝儿（喜爱TA们、支持TA们的人）进行实效的娱乐互动。</p><br/>
+<p>捧丝儿的用户遍布中国的影视娱乐行业，以星探的姿态，为行业发现下一个STAR。捧丝儿，每年见证成百上千个剧组、赛事通过平台成功选拔无数演员、模特与歌手。</p><br/>
+<p>平台已获得上百位明星导师支持，逾百家影视机构合作，覆盖全国近百所艺术院校，囊括国内90％影视娱乐行业人士。</p><br/>
+<p>如果你关注新人成长，我们愿与你海边观潮，用一捧捧真挚的爱，滋养、孵化TA们，共同见证TA们的星路历程。</p><br/>
+<p>如果你是演艺新人，我们愿搭建一个平台，助你龙门一跃。</p><br/>
+<p>如果你是影视剧组或是企业商家，我们愿与你一起号召大众，为你孵化出你想要的才子佳人。同时你的品牌也必将深入人心，万人瞩目！</p><br/>
+<p><strong>你，准备好了吗？</strong></p>
+    </div>
+            </div>
+            <div class="ui-tab-slide-item">
+                <ul class="ui-list ui-list-link ui-border-tb">
+                    <li>
+                        <div class="ui-list-thumb-s">
+                           <span style="background-image:url(assets/img/48.png)"></span>
+                        </div>
+                        <div class="ui-list-info ui-border-t">
+                            <h4>UI组件库 - 辅助类 atom</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ui-list-thumb-s">
+                           <span  style="background-image:url(assets/img/48.png)"></span>
+                        </div>
+                        <div class="ui-list-info ui-border-t">
+                            <h4>UI组件库 - 按钮 button</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+        $("#showContainer").find(".ui-tab li").tap(function(){
+            var cur = $(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            $("#showContainer").find(".ui-tab-slide-item").eq(cur).addClass("current").siblings().removeClass("current");
+            $(".lazyload").lazyLoad();
+        });
+        $(".lazyload").lazyLoad();
+    });
+    </script>
+</body>
+</html>

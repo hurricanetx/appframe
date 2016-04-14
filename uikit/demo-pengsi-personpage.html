@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>个人主页</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body>
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="demo-pengsi-show.html">
+                    <i class="icon icon-back"></i>
+                    <span>活动详情</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">个人主页</span>
+        </div>
+    </div>
+    <div class="ui-page-toolbar ui-hide appdown">
+        <div class="appdown-img"><img src="./img/120.png" alt=""></div>
+        <div class="appdown-txt">
+            <h4>捧丝儿 - 捧主题娱乐社交平台</h4>
+            <p>爱我，就捧我</p>
+        </div>
+        <button id="appdown-btn">下载/打开</button>
+    </div>
+      
+    <!-- scroll view start -->
+        <style stype="text/css">
+        .pos-re {position: relative;}
+        .personpage-param {
+            position: absolute;
+            bottom: 0px;
+            left:0px;
+            width:100%;
+            text-align: center;
+            color:#bbb;
+            background: rgba(0,0,0,0.5);
+        }
+        .personpage-param-item{
+            font-size: 12px;
+            padding: 5px;
+            overflow: visible;
+            display: inline-table;
+        }
+        .personpage-param-item h4{
+            font-size: 15px;
+            color:#fff;
+        }
+        .personpage-param-item span {
+            color:#bbb;
+        }
+        .ui-list-userinfo {
+            max-height: 120px;
+        }
+        .ui-list-userinfo-thumb {
+            width: 50px;
+            margin: 7px 15px 7px 0;
+            height: 70px;
+            position: relative;
+        }
+        .ui-list-userinfo-thumb img {
+          width:100%;
+          border-radius: 0.4em;
+        }
+        .ui-list-userinfo-info h4{
+          font-size: 16px;
+          font-weight:500;
+          color: #282828;
+          padding: 1px 0px 5px 0px;
+        }
+        .ui-list-userinfo-info h4 img,.ui-custom-alumb h4 img,.ui-custom-alumb p img{
+          width:18px;height:18px;vertical-align: top;padding-left: 4px;
+        }
+        .ui-list-userinfo-info h4 span ,.ui-list-userinfo-info p,.ui-custom-alumb h4 span,.ui-custom-alumb p,.ui-list-works-more p{
+          color:#808080;
+          font-size: 14px;
+        }
+        .ui-list-userinfo-arrow {
+            width: 100%;
+            height:auto;
+            display: table; 
+            text-aligh:center;
+        }
+        .ui-custom-alumb { padding: 10px 5px;}
+        .ui-custom-alumb ul li {padding:5px 5px 0px 5px;}
+        .ui-custom-alumb ul li img{width:100%;}
+        .ui-custom-alumb h4 {
+            font-size: 16px;
+            font-weight:500;
+            color: #282828;
+            padding: 5px;
+        }
+        .ui-custom-alumb p span {padding-left: 5px;padding-right: 5px; }
+        .ui-custom-alumb p span.right {float: right;}
+        .ui-custom-alumb p {padding-left: 5px;padding-right: 5px;}
+        .ui-list-verify-info {color:#005CBE;font-weight:bold;padding: 10px 0px 10px 0px;}
+        .ui-list-info-l {
+            width: 60px;
+            padding-right: 5px;
+            position: relative;
+        }
+        .ui-list-works-info {padding: 10px 10px 10px 0px;}
+        .ui-list-works-more {line-height: 40px;vertical-align: middle;padding-right: 10px;}
+        .ui-list-works-info p {color: #282828; }
+        .pos-right {text-align: right;}
+        </style>
+        <!-- 个人主页背景 和 参数-->
+        <div class="ui-grid-row pos-re">
+            <img src="http://file.pengsi.cn/appuser/cover/48/01/10/100148/91abd894f417032e8db8a01c83d134b5l.jpg" class="col-100"/>
+            <!-- <img src="http://file.pengsi.cn/appuser/cover/59/37/12/123759/f23c508d7921304c5935339ad603dafcl.jpg" class="col-100"/> -->
+            <div class="personpage-param ui-grid-row">
+                <!-- <div class="personpage-param-item col-33">
+                    <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                    <span>3.8万</span>
+                </div>
+                <div class="personpage-param-item col-33">
+                    <img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt="">
+                    <span>43</span>
+                </div>
+                <div class="personpage-param-item col-33">
+                    <img src="http://m.pengsi.cn/assets/images/img_mainpage_staricon@2x.png" alt="">
+                    <span>265</span>
+                </div> -->
+                <div class="personpage-param-item col-33">
+                    <h4>3.8万</h4>
+                    <span>魅魅花</span>
+                </div>
+                <div class="personpage-param-item col-33">
+                    <h4>43</h4>
+                    <span>捧爷草</span>
+                </div>
+                <div class="personpage-param-item col-33">
+                    <h4>265</h4>
+                    <span>捧丝儿</span>
+                </div>
+            </div>
+        </div>
+        <!-- / 个人主页背景 和 参数 -->
+        <!-- 用户档案 -->
+        <ul class="ui-list ui-border-tb">
+            <li class="ui-border-t ui-list-item-link ui-tapable" data-target="demo-pengsi-profile.html">
+                <div class="ui-list-userinfo-thumb">
+                   <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"/>
+                </div>
+                <div class="ui-list-info ui-list-userinfo-info">
+                    <h4>用户昵称
+                        <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                        <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                    </h4>
+                    <p>计算机/互联网/通信</p>
+                    <p>北京&nbsp;朝阳</p>
+                </div>
+            </li>
+            <li class="ui-border-t ui-grid-row ui-list-verify-info">
+                <div class="ui-list-info-l">
+                    认证说明
+                </div>
+                <div class="ui-list-info">
+                    中国互联网牛人：傻大木  代表作品《飞机闯进你的心》
+                </div>
+            </li>
+            <li class="ui-border-t ui-list-works-info">
+                <p class="ui-list-info-l">代表作品</p>
+                <p class="ui-list-info">在电影《四大名捕3  2014》中，与刘亦菲、黄少秋合作，扮演神侯府扫地小工<br/>
+                在电影《露水红颜 2014》中，与郑智薰、 王学兵合作，饰演邢露</p>
+            </li>
+            <li class="ui-border-t ui-list-item-link ui-list-works-more pos-right ui-tapable" data-target="demo-pengsi-profile.html">
+                <p class="ui-list-info">查看档案</p>
+            </li>
+        </ul>
+        <!-- / 用户档案 -->
+        <!-- 作品 -->
+        <div class="ui-panel ui-border-tb ui-custom-alumb">
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/28/66/11/116628/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/27/66/11/116627/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/26/66/11/116626/st.jpg" alt=""></li>
+            </ul>
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/38/46/11/114638/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/37/46/11/114637/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/36/46/11/114636/st.jpg" alt=""></li>
+            </ul>
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/35/46/11/114635/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/34/46/11/114634/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/36/46/11/114636/st.jpg" alt=""></li>
+            </ul>
+            <h4>艺术照 - 绝美少女 - 图集名称<img src="http://m.pengsi.cn/assets/images/approve-logo_gray@2x.png" alt=""></h4>
+            <p>
+                <img src="http://m.pengsi.cn/assets/images/img_main_photo@2x.png" alt="">
+                <span>9</span>
+                <img src="http://m.pengsi.cn/assets/images/img_main_zanmark@2x.png" alt="">
+                <span>22399</span>
+                <img src="http://m.pengsi.cn/assets/images/img_main_comment@2x.png" alt="">
+                <span>3</span>
+                <span class="right">10月前</span>
+            </p> 
+        </div>
+        <div class="ui-panel ui-border-tb ui-custom-alumb">
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-100"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/28/66/11/116628/lt.jpg" alt=""></li>
+            </ul>
+            <h4>艺术照 - 绝美少女 - 图集名称<img src="http://m.pengsi.cn/assets/images/approve-logo_gray@2x.png" alt=""></h4>
+            <p>
+                <img src="http://m.pengsi.cn/assets/images/img_main_photo@2x.png" alt="">
+                <span>1</span>
+                <img src="http://m.pengsi.cn/assets/images/img_main_zanmark@2x.png" alt="">
+                <span>22399</span>
+                <img src="http://m.pengsi.cn/assets/images/img_main_comment@2x.png" alt="">
+                <span>30</span>
+                <span class="right">10月前</span>
+            </p> 
+        </div>
+        <div class="ui-panel ui-border-tb ui-custom-alumb">
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/28/66/11/116628/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/27/66/11/116627/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/26/66/11/116626/st.jpg" alt=""></li>
+            </ul>
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/38/46/11/114638/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/37/46/11/114637/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/36/46/11/114636/st.jpg" alt=""></li>
+            </ul>
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/35/46/11/114635/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/34/46/11/114634/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/36/46/11/114636/st.jpg" alt=""></li>
+            </ul>
+            <h4>艺术照 - 绝美少女 - 图集名称<img src="http://m.pengsi.cn/assets/images/approve-logo_gray@2x.png" alt=""></h4>
+            <p>
+                <img src="http://m.pengsi.cn/assets/images/img_main_photo@2x.png" alt="">
+                <span>9</span>
+                <img src="http://m.pengsi.cn/assets/images/img_main_zanmark@2x.png" alt="">
+                <span>22399</span>
+                <img src="http://m.pengsi.cn/assets/images/img_main_comment@2x.png" alt="">
+                <span>3</span>
+                <span class="right">10月前</span>
+            </p> 
+        </div>
+        <div class="ui-panel ui-border-tb ui-custom-alumb">
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-100"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/28/66/11/116628/lt.jpg" alt=""></li>
+            </ul>
+            <h4>艺术照 - 绝美少女 - 图集名称<img src="http://m.pengsi.cn/assets/images/approve-logo_gray@2x.png" alt=""></h4>
+            <p>
+                <img src="http://m.pengsi.cn/assets/images/img_main_photo@2x.png" alt="">
+                <span>1</span>
+                <img src="http://m.pengsi.cn/assets/images/img_main_zanmark@2x.png" alt="">
+                <span>22399</span>
+                <img src="http://m.pengsi.cn/assets/images/img_main_comment@2x.png" alt="">
+                <span>30</span>
+                <span class="right">10月前</span>
+            </p> 
+        </div>
+        <div class="ui-panel ui-border-tb ui-custom-alumb">
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/28/66/11/116628/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/27/66/11/116627/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/26/66/11/116626/st.jpg" alt=""></li>
+            </ul>
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/38/46/11/114638/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/37/46/11/114637/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/36/46/11/114636/st.jpg" alt=""></li>
+            </ul>
+            <ul class="ui-grid-row no-gutter">
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/35/46/11/114635/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/34/46/11/114634/st.jpg" alt=""></li>
+                 <li class="col-33"><img class="lazyload" data-original="http://file.pengsi.cn/user/photo/36/46/11/114636/st.jpg" alt=""></li>
+            </ul>
+            <h4>艺术照 - 绝美少女 - 图集名称<img src="http://m.pengsi.cn/assets/images/approve-logo_gray@2x.png" alt=""></h4>
+            <p>
+                <img src="http://m.pengsi.cn/assets/images/img_main_photo@2x.png" alt="">
+                <span>9</span>
+                <img src="http://m.pengsi.cn/assets/images/img_main_zanmark@2x.png" alt="">
+                <span>22399</span>
+                <img src="http://m.pengsi.cn/assets/images/img_main_comment@2x.png" alt="">
+                <span>3</span>
+                <span class="right">10月前</span>
+            </p> 
+        </div>
+        <!-- / 作品 -->
+        <!-- 更多作品 下载捧丝儿 -->
+        <div class="ui-btn-wrap">
+            <button class="ui-btn-lg appdown-btn">想了解 #用户昵称# 更多</button>
+        </div>
+        <!-- / 更多作品 下载捧丝儿 -->
+    <!-- /scroll view end -->
+
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript" src="../assets/module/ext.weixinApi.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("body").autoapp({app : {
+                ios: {
+                    url:"https://itunes.apple.com/cn/app/peng-si-er/id672299307?mt=8",
+                    enter: "pengsi://portalrank?0"
+                },
+                android: {
+                    //'url': null,
+                    url : "http://www.chforce.com/pengsi/PengSi.apk",
+                    enter: "pengsi://portalrank?0"
+                },btn : "#appdown-btn",insetBtn:".appdown-btn"
+            }});
+            $(".lazyload").lazyLoad();
+
+            //图片预览控制
+            $(".ui-custom-alumb").tap(function(){
+                if(!window.WeixinApi || !window.WeixinJSBridge) {
+                    alert('请确认您是在微信内置浏览器中打开的，并且ext.weixinApi.min.js已正确引用');
+                    e.preventDefault();
+                    return false;
+                }
+                var picList=[],imgs = $(this).find("img.lazyload").each(function(){
+                    picList.push($(this).attr("src").replace(/[s|m|l]t\.jpg/ig,"l.jpg"));
+                });
+                WeixinApi.imagePreview(picList[0],picList);
+            });
+
+            // 需要分享的内容，请放到ready里
+            WeixinApi.ready(function(Api) {
+                var wxDataPool = {
+                    imgs : ["http://file.pengsi.cn/user/photo/28/66/11/116628/st.jpg", "http://file.pengsi.cn/user/photo/27/66/11/116627/st.jpg", "http://file.pengsi.cn/user/photo/26/66/11/116626/st.jpg", "http://file.pengsi.cn/user/photo/38/46/11/114638/st.jpg", "http://file.pengsi.cn/user/photo/37/46/11/114637/st.jpg", "http://file.pengsi.cn/user/photo/36/46/11/114636/st.jpg", "http://file.pengsi.cn/user/photo/35/46/11/114635/st.jpg", "http://file.pengsi.cn/user/photo/34/46/11/114634/st.jpg", "http://file.pengsi.cn/user/photo/36/46/11/114636/st.jpg"],
+                    titie: ["我是王艺霏，我在捧丝儿","著名明星刘亦菲入驻捧丝儿","这个页面每次分享标题可能不一样","大家好，我是周星星，我来选美人鱼了","震撼娱乐圈：范冰冰、李小璐、周润发、谢霆锋再发艳照门","我会用爱感动你们，我爱你们","好久没上了，靓照爆发了","据说看到这个标题点进去人，工资会涨50%","《不能说的夏天》首映，我在现场，我是高圆圆","你是我的小奶牛，我是你的奶茶","快来跟我《点燃关系》，我是金粮","作者：CHurricane，这个是菜单"],
+                    desc : ["著名美女王艺霏，曾吸引5000人同时追求，造成整个3环拥挤到不能动弹","刘亦菲，1987年8月25日出生于湖北省武汉市，影视女演员、歌手，毕业于北京电影学院2002级表演系本科班。我在捧丝儿，快来捧我哟","每次分享内容也会不一样哦，彩蛋等你来发现，作者：CHurricane","捧丝儿，独家捧主题娱乐社交平台。当大家都在关注明星的时候,捧丝儿只为新人代言。捧丝儿倡导:捧,就是爱与支持。爱我,就捧我!","我刚刚在捧丝儿平台，发了一套图片作品，瞬间有数百万查阅，太神奇了，我好喜欢这里","大家好我是周星驰，我在捧丝儿等你报名哦。转发个人主页到微信，可获得额外的面试机会，我爱美人鱼","据说分享这条信息的明星，都通过捧丝儿平台获得了主角的机会，神器哈","只有1%的人知道答案，你是不是其中的一个呢","牛逼，我刚刚在影客视觉吹泡泡活动中，吹了500个气泡，打败了93%的小伙伴，哼，你行吗？"]
+                };
+                // 分享的回调
+                var wxCallbacks = {
+                    all : function(resp,shareTo) {
+                        // 如果你做的是一个鼓励用户进行分享的产品，在这里是不是可以给用户一些反馈了？
+                       
+                    }
+                };
+                // 微信分享的数据
+                var wxData = {
+                    "appId": "", // 服务号可以填写appId
+                    "imgUrl" : wxDataPool.imgs[Math.floor(Math.random()*wxDataPool.imgs.length)],
+                    "link" : 'http://www.chforce.com/appframe/uikit/demo-pengsi-personpage.html',
+                    "desc" : wxDataPool.desc[Math.floor(Math.random()*wxDataPool.desc.length)],
+                    "title" : wxDataPool.titie[Math.floor(Math.random()*wxDataPool.titie.length)]
+                };
+
+                Api.shareToFriend(wxData, wxCallbacks);
+                Api.shareToTimeline(wxData, wxCallbacks);
+                Api.shareToWeibo(wxData, wxCallbacks);
+                Api.generalShare(wxData,wxCallbacks);
+            });
+        });
+    </script>   
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>个人档案</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body>
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="demo-pengsi-personpage.html">
+                    <i class="icon icon-back"></i>
+                    <span>个人主页</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">个人档案</span>
+        </div>
+    </div>
+    <div class="ui-page-toolbar ui-hide appdown">
+        <div class="appdown-img"><img src="./img/120.png" alt=""></div>
+        <div class="appdown-txt">
+            <h4>捧丝儿 - 捧主题娱乐社交平台</h4>
+            <p>爱我，就捧我</p>
+        </div>
+        <button id="appdown-btn">下载/打开</button>
+    </div>
+    
+    <!-- scroll view start -->
+        <style stype="text/css">
+        .ui-list-profile-title {
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            text-transform: uppercase;
+            line-height: 1;
+            color: #6d6d72;
+            margin: 10px 15px 10px;
+        }
+        .ui-list-profile-thumb {
+            width: 100%;
+            text-align: center;
+            padding-top:20px;
+            
+        }
+        .ui-list-profile-thumb .face {
+            width:20%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .ui-list-profile-thumb .face img {width:100%;border-radius: 0.4em;}
+        .ui-list-profile-thumb .icon {
+            width:18px;height:18px;
+            position: absolute;
+            right:0px;
+            bottom:7px;
+        }
+        .ui-list-profile {
+        }
+        .ui-list-profile li{
+            line-height: 20px;
+            font-size: 16px; 
+            position: relative;
+            margin-left: 15px;
+        }
+        .ui-list-profile li .left{
+            color:#808080;
+            text-align: left;
+            vertical-align: middle;
+            width: 80px;
+            padding: 12px 25px 12px 0;
+            position: relative; 
+        }
+        .ui-list-profile .normal {
+            color:#282828;
+            text-align: left;
+            vertical-align: middle;
+            padding: 7px 15px 7px 0;
+            position: relative; 
+            font-size: 13px;
+        }
+        .ui-list-profile li .right{
+            color:#282828;
+            text-align: right;
+            vertical-align: middle;
+            -webkit-box-flex: 1;
+            box-flex: 1;
+            padding: 12px 15px 12px 0;
+        }
+        .ui-list-profile li.ui-list-item-link .right {
+            color:#00a5e0;
+            padding-right: 35px;
+        }
+        .ui-list-profile li .verify {color:#005CBE;}
+        .ui-list-profile li img {
+            width:18px;height:18px;vertical-align: top;padding-left: 4px;
+        }
+        </style>
+        <!-- 个人头像-->
+        <div class="ui-list-profile-thumb">
+            <div class="face">
+                <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"/>
+                <span class="icon"><img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""></span>
+            </div>
+        </div>
+        <!-- / 个人头像 -->
+        <!-- 基本资料 -->
+        <h3 class="ui-list-profile-title">基本资料</h3>
+        <ul class="ui-list ui-border-tb ui-list-profile">
+            <li class="ui-border-t">
+                <div class="left">姓名</div>
+                <div class="right">刘鹏梦</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">性别</div>
+                <div class="right">女</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">生日</div>
+                <div class="right">1986-07-22</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">星座</div>
+                <div class="right">巨蟹座</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">行业</div>
+                <div class="right">影视</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">简介</div>
+                <div class="right">大家好，我是影视演员刘鹏梦，希望大家能多多支持我，爱我就捧我大家好，我是影视演员刘鹏梦，希望大家能多多支持我，爱我就捧我</div>
+            </li>
+        </ul>
+        <!-- / 基本资料 -->
+        <!-- 认证信息 -->
+        <h3 class="ui-block-title">认证信息</h3>
+        <ul class="ui-list ui-border-tb ui-list-profile">
+            <li class="ui-border-t">
+                <div class="left">认证状态</div>
+                <div class="right">身份认证<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""></div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">认证说明</div>
+                <div class="right verify">中国互联网牛人：傻大木  代表作品《飞机闯进你的心》</div>
+            </li>
+        </ul>
+        <!-- / 认证信息 -->
+        <!-- 代表作品 -->
+        <h3 class="ui-block-title">代表作品</h3>
+        <ul class="ui-list ui-border-tb ui-list-profile">
+            <li class="ui-border-t normal">在电影《四大名捕3  2014》中，与刘亦菲、黄少秋合作，扮演神侯府扫地小工</li>
+            <li class="ui-border-t normal">在电影《露水红颜 2014》中，与郑智薰、 王学兵合作，饰演邢露</li>
+            <li class="ui-border-t normal">在电影《四大名捕3  2014》中，与刘亦菲、黄少秋合作，扮演神侯府扫地小工</li>
+            <li class="ui-border-t normal">在电影《露水红颜 2014》中，与郑智薰、 王学兵合作，饰演邢露</li>
+            <li class="ui-border-t normal">在电影《四大名捕3  2014》中，与刘亦菲、黄少秋合作，扮演神侯府扫地小工</li>
+            <li class="ui-border-t normal">在电影《露水红颜 2014》中，与郑智薰、 王学兵合作，饰演邢露</li>
+            <li class="ui-border-t normal">在电影《四大名捕3  2014》中，与刘亦菲、黄少秋合作，扮演神侯府扫地小工</li>
+        </ul>
+        <!-- / 代表作品 -->
+        <!-- 专业资料 -->
+        <h3 class="ui-block-title">专业资料</h3>
+        <ul class="ui-list ui-border-tb ui-list-profile">
+            <li class="ui-border-t">
+                <div class="left">职业</div>
+                <div class="right">童星、出品人、监制</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">出生地</div>
+                <div class="right">河北 唐川</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">民族</div>
+                <div class="right">蒙古族</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">身高</div>
+                <div class="right">157 CM</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">体重</div>
+                <div class="right">57 KG</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">三围</div>
+                <div class="right">胸围 12 腰围 12 臀围 12</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">语言</div>
+                <div class="right">英语、韩语、日语</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">特长</div>
+                <div class="right">高尔夫、乒乓球、唱歌、跳舞、滑雪、保龄球、骑马、发呆</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">学校</div>
+                <div class="right">北京传媒大学 <em>在读</em></div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">主要成就</div>
+                <div class="right">国际电影节男主街，F&M御用男女混合模特</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">当前公司</div>
+                <div class="right">北京星光闪闪影视制作有限责任公司</div>
+            </li>
+        </ul>
+        <h3 class="ui-list-profile-title"></h3>
+        <ul class="ui-list ui-border-tb ui-list-profile">
+            <li class="ui-border-t">
+                <div class="left">国籍</div>
+                <div class="right">澳大利亚</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">肤色</div>
+                <div class="right">黄色</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">脸型</div>
+                <div class="right">方形</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">眼部特征</div>
+                <div class="right">大眼睛 双眼皮</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">形象风格</div>
+                <div class="right">青春靓丽、小鸟依人</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">梦想角色</div>
+                <div class="right">美国医生格林</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">期望合作<br/>对象</div>
+                <div class="right">泰勒·斯威夫特</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">宗教信仰</div>
+                <div class="right">佛教</div>
+            </li>
+        </ul>
+        <!-- / 专业资料 -->
+        <!-- 联系方式 -->
+        <h3 class="ui-block-title">联系方式</h3>
+        <ul class="ui-list ui-border-tb ui-list-profile">
+            <li class="ui-border-t">
+                <div class="left">电子邮箱</div>
+                <div class="right">example@domain.hostprix</div>
+            </li>
+            <li class="ui-border-t ui-list-item-link ui-tapable" data-target="http://weibo.com/u/3236875074">
+                <div class="left">新浪微博</div>
+                <div class="right">大皇帝</div>
+            </li>
+            <li class="ui-border-t ui-list-item-link ui-tapable" data-target="http://t.qq.com/JOBREST">
+                <div class="left">腾讯微博</div>
+                <div class="right">大皇帝</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">助理电话</div>
+                <div class="right">13012345678</div>
+            </li>
+            <li class="ui-border-t">
+                <div class="left">经纪人电话</div>
+                <div class="right">13012345678</div>
+            </li>
+        </ul>
+        <!-- / 联系方式 -->
+        <!-- 更多作品 下载捧丝儿 -->
+        <br/>
+        <!-- / 更多作品 下载捧丝儿 -->
+    <!-- /scroll view end -->
+
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("body").autoapp({app : {
+                ios: {
+                    url:"https://itunes.apple.com/cn/app/peng-si-er/id672299307?mt=8",
+                    enter: "pengsi://portalrank?0"
+                },
+                android: {
+                    //'url': null,
+                    url : "http://www.chforce.com/pengsi/PengSi.apk",
+                    enter: "pengsi://portalrank?0"
+                },btn : "#appdown-btn"
+            }});
+        });
+    </script>    
+</body>
+</html>

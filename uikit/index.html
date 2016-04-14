@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>捧丝儿响应式检测工具</title>
+    <link rel="stylesheet" type="text/css" href="assets/index.css">
+</head>
+<body>
+    <div id="topbar" class="layout bg-sub fixed-top">
+        <div class="container">
+            <strong class="text-big">捧丝儿响应式检测工具</strong>
+            <input type="text" id="url" name="url" size="30" onkeydown="if(event.keyCode==13){urlcheck()}"placeholder="网址，如：m.pengsi.cn">
+            <button type="button" id="urlcheck" name="check" onclick="urlcheck()">检测</button>
+        </div> 
+    </div>
+    <br />
+
+    <div class="layout space iphone5">
+        <div class="time clearfix">22:10</div>
+        <iframe src="" id="iphone5"></iframe>
+        <p>iPhone 5/5c/5s 响应式布局测试 (宽: 320px)</p>
+    </div>
+    
+    <div class="layout space iphone5-x">
+        <div class="time">22:10</div>
+        <iframe src="" id="iphone5-x"></iframe>
+        <p>iPhone 5/5c/5s 横屏 响应式布局测试 (宽: 568px)</p>
+    </div>
+    
+    <div class="layout space iphone6">
+        <div class="time clearfix">22:10</div>
+        <iframe src="" id="iphone6"></iframe>
+        <p>iPhone 6 响应式布局测试 (宽: 375px)</p>
+    </div>
+    
+    <div class="layout space iphone6-x">
+        <div class="time">22:10</div>
+        <iframe src="" id="iphone6-x"></iframe>
+        <p>iPhone 6 横屏 响应式布局测试 (宽: 667px)</p>
+    </div>
+    
+    <div class="layout space iphone6-plus">
+        <div class="time clearfix">22:10</div>
+        <iframe src="" id="iphone6-plus"></iframe>
+        <p>iPhone 6 Plus 响应式布局测试 (宽: 414px)</p>
+    </div>
+    
+    <div class="layout space iphone6-plus-x">
+        <div class="time clearfix">22:10</div>
+        <iframe src="" id="iphone6-plus-x"></iframe>
+        <p>iPhone 6 Plus 横屏 响应式布局测试 (宽: 736px)</p>
+    </div>
+    
+    <div class="layout space ipad">
+        <div class="time clearfix">22:10</div>
+        <iframe src="" id="ipad"></iframe>
+        <p>iPad 响应式布局测试 (宽: 768px)</p>
+    </div>
+    
+    <div class="layout space ipad-x">
+        <div class="time">22:10</div>
+        <iframe src="" id="ipad-x"></iframe>
+        <p>iPad 横屏 响应式布局测试 (宽: 1024px)</p>
+    </div>
+    <script>
+    function urlcheck(url){
+        var url = document.getElementById("url").value || url;
+        document.getElementById("url").value = url;
+        if (url.length){
+            var ifrs = document.getElementsByTagName("iframe");
+            for(var i=0;i< ifrs.length;i++){
+                ifrs[i].src = url+"?r="+Math.random();
+            }
+        }else{
+            alert('请输入网址');
+        }
+    }
+    window.onload=function(){urlcheck('uikit.html');};
+    </script>
+</body>
+</html>

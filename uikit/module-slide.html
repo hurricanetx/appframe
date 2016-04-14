@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-slide</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">组件库 - 幻灯(slide)</span>
+        </div>
+    </div>
+    <h3 class="ui-block-title">普通用法</h3>
+    <div class="ui-panel">
+        <style type="text/css">
+        .slide{
+            position: relative;
+            max-width: 640px;
+            overflow: hidden;
+            margin: 10px auto;
+        }
+        .slide:after{
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 50%;
+        }
+        .slide ul{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .slide li{
+            list-style: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .slide li img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .slide .dot{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            font-size: 0;
+        }
+        .slide .dot span{
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            margin-left: 5px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+        }
+        .slide .dot .cur{
+            background-color: #fff;
+        }
+        </style>
+        <div class="slide" id="slide1">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="http://d10.yihaodianimg.com/V00/M03/4D/41/CgQDsVQG4d6AISZPAAFa7N3KyPY18100.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="http://d10.yihaodianimg.com/V00/M04/32/59/CgQDsVQDEtaAVv4BAAEFc6n3fws75000.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="http://d11.yihaodianimg.com/N05/M04/82/EC/CgQI01QEHoiAFBbgAAC9du5zOPc62900.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="http://d10.yihaodianimg.com/N07/M09/26/8B/CgQI0FQFd8-ACrb7AADBtSan3a084000.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide2">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="http://d10.yihaodianimg.com/V00/M03/4D/41/CgQDsVQG4d6AISZPAAFa7N3KyPY18100.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="http://d10.yihaodianimg.com/V00/M04/32/59/CgQDsVQDEtaAVv4BAAEFc6n3fws75000.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="http://d11.yihaodianimg.com/N05/M04/82/EC/CgQI01QEHoiAFBbgAAC9du5zOPc62900.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="http://d10.yihaodianimg.com/N07/M09/26/8B/CgQI0FQFd8-ACrb7AADBtSan3a084000.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="//www.163.com/">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="http://d11.yihaodianimg.com/N05/M07/8B/45/CgQI01QGlhyAevtRAADW1vYf_BE12500.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="//www.sohu.com/">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="http://d10.yihaodianimg.com/N06/M0B/2F/38/CgQIzlQHyBWAbOr0AAChSgod8ho33700.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide3">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="http://d10.yihaodianimg.com/V00/M03/4D/41/CgQDsVQG4d6AISZPAAFa7N3KyPY18100.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="http://d10.yihaodianimg.com/V00/M04/32/59/CgQDsVQDEtaAVv4BAAEFc6n3fws75000.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="http://d11.yihaodianimg.com/N05/M04/82/EC/CgQI01QEHoiAFBbgAAC9du5zOPc62900.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="http://d10.yihaodianimg.com/N07/M09/26/8B/CgQI0FQFd8-ACrb7AADBtSan3a084000.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="dot">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+                       <pre class="ui-module-code ui-border-tb ui-panel-code">
+<p><em>页面结构</em></p><xmp class="ui-module-code"><div class="slide" id="slide1">
+    <ul>
+        <li>
+            <a href="javascript:void(0);">
+                <img src="http://d10.yihaodianimg.com/V00/M03/4D/41/CgQDsVQG4d6AISZPAAFa7N3KyPY18100.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <img src="http://d10.yihaodianimg.com/V00/M04/32/59/CgQDsVQDEtaAVv4BAAEFc6n3fws75000.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <img src="http://d11.yihaodianimg.com/N05/M04/82/EC/CgQI01QEHoiAFBbgAAC9du5zOPc62900.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <img src="http://d10.yihaodianimg.com/N07/M09/26/8B/CgQI0FQFd8-ACrb7AADBtSan3a084000.jpg" alt="">
+            </a>
+        </li>
+    </ul>
+</div>
+                    </xmp>
+<em>页面结构</em><xmp class="ui-module-code">
+<script type="text/javascript">
+    $(function(){
+        $('#slide1').slider();
+
+        $('#slide2').slider({
+            autoSwipe : false,
+            continuousScroll:true,
+            lazyLoad : true
+        });
+
+        $('#slide3').slider({
+            continuousScroll:true,
+            speed : 3000,
+            transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)'
+        },function(i){
+            $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+        });
+    });
+</script>
+                    </xmp></pre>
+
+    <script type="text/javascript" src="../assets/module/ui.slider.min.js"></script>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+        $('#slide1').slider();
+
+        $('#slide2').slider({
+            autoSwipe : false,
+            continuousScroll:true,
+            lazyLoad : true
+        });
+
+        $('#slide3').slider({
+            continuousScroll:true,
+            speed : 3000,
+            transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)'
+        },function(i){
+            $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+        });
+    });
+    </script>
+</body>
+</html>

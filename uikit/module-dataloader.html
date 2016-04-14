@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-dataloader</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">加载更多</span>
+        </div>
+    </div>
+    <h3 class="ui-block-title">示例 请向下滑动</h3>
+    <ul class="ui-list ui-border-tb">
+        <div class="ui-loadmore" data-href="../handle/listdemo.php?page=" data-param="0" data-tpl="show-0-2-tpl">加载更多</div>
+    </ul>
+    <br/>
+    <script type="text/javascript" src="../assets/module/ui.dataloader.min.js"></script>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+        $(".ui-loadmore").dataloader();
+    });
+    </script>
+    <script type="text/template" id="show-0-2-tpl">
+    <% for(var i=0;i<data.length;i++){ %>
+    <li>
+        <div class="ui-list-thumb-s">
+           <span style="background-image:url(assets/img/48.png)"></span>
+        </div>
+        <div class="ui-list-info ui-border-t">
+            <h4><%=data[i].name%></h4>
+        </div>
+    </li>
+    <% } %>
+    </script>
+    <style>
+    .ui-list .ui-loadmore {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+    </style>
+</body>
+</html>

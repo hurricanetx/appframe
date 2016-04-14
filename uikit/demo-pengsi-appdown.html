@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>捧丝儿 应用下载</title>
+    <meta name="keywords" content="捧丝儿,玩转,关于,捧爷,星星,娱乐,互动" />
+    <meta name="description" content="《捧丝儿》是影客云(北京)网络技术有限公司，推出的新型网络文化平台。为捧丝儿、捧爷、星星们提供一个互动的环境。" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body>
+    <div class="ui-page-navbar ui-hide trans">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="demo-pengsi.html">
+                    <i class="icon icon-back"></i>
+                    <span>捧丝儿</span>
+                </a>
+            </span>
+        </div>
+    </div>
+    <style>
+    .ui-page-navbar.trans{
+        background: transparent;
+    }
+    .infopage {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        position: absolute;
+        top:0px;
+        overflow: hidden;
+    }
+    #appdown-btn{
+        display: inline-block;
+        position: absolute;
+        text-align: center;
+        border: 0 none;
+        color: #282828;
+        background-color: #fd2;
+        background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.38,#fd2),to(##fe802d));
+        vertical-align: top;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+        -webkit-box-sizing: border-box;
+        border: 1px solid #fd2;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        font-size: 18px;
+        height: 44px;
+        line-height: 42px;
+        display: block;
+        padding: 0 13px;
+        text-decoration: none;
+        cursor: pointer;
+        width:100%;
+        bottom:0px;
+        z-index: 500000;
+    }
+    #appdown-btn.disabled{
+        background: #c0c0c0;
+        border: 1px solid #c0c0c0;
+    }
+    .full,.full ul{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .full li{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .full li span{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: top center;
+    }
+    </style>
+    <div class="infopage">
+    <button id="appdown-btn" onclick="location.href='http://m.pengsi.cn'">下载/打开 捧丝儿</button>
+    <div class="full">
+        <ul>
+            <li>
+                <span data-src="img/1.jpg"></span>
+            </li>
+            <li>
+                <span data-src="img/2.jpg"></span>
+            </li>
+            <li>
+                <span data-src="img/3.jpg"></span>
+            </li>
+            <li>
+                <span data-src="img/4.jpg"></span>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <script type="text/javascript" src="../assets/module/ui.slider.min.js"></script>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.full').slider({
+            continuousScroll : true,
+            axisX : true,
+            autoSwipe : true,
+            lazyLoad : true
+        });
+        $("body").autoapp({app : {
+                ios: {
+                    url:"https://itunes.apple.com/cn/app/peng-si-er/id672299307?mt=8",
+                    enter: "pengsi://portalrank?0"
+                },
+                android: {
+                    url: null,
+                    // url : "http://www.chforce.com/pengsi/PengSi.apk",
+                    enter: "pengsi://portalrank?0"
+                },btn : "#appdown-btn",insetBtn: "#appdown-btn" 
+            },mode: true});
+        
+    });
+    </script>
+</body>
+</html>

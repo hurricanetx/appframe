@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-gotop</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">回到顶部</span>
+        </div>
+    </div>
+       
+    <h3 class="ui-block-title">Gotop</h3>
+    <div class="ui-panel ui-border-tb">
+        当页面非常长的时候，特别是无限加载模式的话，gotop可以带来很好的体验。<br/>
+        使用方式非常简单：
+    </div>
+    <pre class="ui-module-code ui-border-tb ui-panel-code"><xmp class="ui-module-code">
+    <div id="gotop"></div>
+    <script type="text/javascript" src="../assets/module/ui.gotop.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#gotop").gotop();
+    });
+    </script>  
+</xmp></pre>
+    <div id="gotop"></div>
+    <script type="text/javascript" src="../assets/module/ui.gotop.min.js"></script>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+        $("#gotop").gotop();
+    });
+    </script>  
+</body>
+</html>

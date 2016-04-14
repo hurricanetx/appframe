@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-area-missing</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="module-chart.html">
+                    <i class="icon icon-back"></i>
+                    <span>超级图表</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">area-missing</span>
+        </div>
+    </div>
+    <style>
+    #container {
+        margin: 0 auto;
+        width:100%;
+        height:50%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        text-align: center;
+    }
+    </style>
+    <div id="container"></div>
+    <script type="text/javascript" src="../assets/module/ext.chart.min.js"></script>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+        new Highcharts.Chart({
+                            chart: {
+                                renderTo: 'container',
+                                defaultSeriesType: 'area',
+                                spacingBottom: 30
+                            },
+                            title: {
+                                text: 'Fruit consumption *'
+                            },
+                            subtitle: {
+                                text: '* Jane\'s banana consumption is unknown',
+                                floating: true,
+                                align: 'right',
+                                verticalAlign: 'bottom',
+                                y: 15
+                            },
+                            legend: {
+                                layout: 'vertical',
+                                align: 'left',
+                                verticalAlign: 'top',
+                                x: 150,
+                                y: 100,
+                                floating: true,
+                                borderWidth: 1,
+                                backgroundColor: '#FFFFFF'
+                            },
+                            xAxis: {
+                                categories: ['Apples', 'Pears', 'Oranges', 'Bananas', 'Grapes', 'Plums', 'Strawberries', 'Raspberries']
+                            },
+                            yAxis: {
+                                title: {
+                                    text: 'Y-Axis'
+                                },
+                                labels: {
+                                    formatter: function() {
+                                        return this.value;
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                formatter: function() {
+                                        return '<b>'+ this.series.name +'</b><br/>'+
+                                        this.x +': '+ this.y;
+                                }
+                            },
+                            plotOptions: {
+                                area: {
+                                    fillOpacity: 0.5
+                                }
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                            series: [{
+                                name: 'John',
+                                data: [0, 1, 4, 4, 5, 2, 3, 7]
+                            }, {
+                                name: 'Jane',
+                                data: [1, 0, 3, null, 3, 1, 2, 1]
+                            }]
+                        });
+    });
+    </script>
+</body>
+</html>

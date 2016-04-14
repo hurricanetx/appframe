@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-dynamic-click-to-add</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="module-chart.html">
+                    <i class="icon icon-back"></i>
+                    <span>超级图表</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">click-to-add</span>
+        </div>
+    </div>
+    <style>
+    #container {
+        margin: 0 auto;
+        width:100%;
+        height:50%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        text-align: center;
+    }
+    </style>
+    <div id="container"></div>
+    <script type="text/javascript" src="../assets/module/ext.chart.min.js"></script>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+        new Highcharts.Chart({
+                            chart: {
+                                renderTo: 'container',
+                                defaultSeriesType: 'scatter',
+                                margin: [70, 50, 60, 80],
+                                events: {
+                                    click: function(e) {
+                                        // find the clicked values and the series
+                                        var x = e.xAxis[0].value,
+                                            y = e.yAxis[0].value,
+                                            series = this.series[0];
+                                            
+                                        // Add it
+                                        series.addPoint([x, y]);
+                        
+                                    }
+                                }
+                            },
+                            title: {
+                                text: 'User supplied data'
+                            },
+                            subtitle: {
+                                text: 'Click the plot area to add a point. Click a point to remove it.'
+                            },
+                            xAxis: {
+                                minPadding: 0.2,
+                                maxPadding: 0.2,
+                                maxZoom: 60
+                            },
+                            yAxis: {
+                                title: {
+                                    text: 'Value'
+                                },
+                                minPadding: 0.2,
+                                maxPadding: 0.2,
+                                maxZoom: 60,
+                                plotLines: [{
+                                    value: 0,
+                                    width: 1,
+                                    color: '#808080'
+                                }]
+                            },
+                            legend: {
+                                enabled: false
+                            },
+                            exporting: {
+                                enabled: false
+                            },
+                            plotOptions: {
+                                series: {
+                                    lineWidth: 1,
+                                    point: {
+                                        events: {
+                                            'click': function() {
+                                                if (this.series.data.length > 1) this.remove();
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            series: [{
+                                data: [[20, 20], [80, 80]]
+                            }]
+                        });
+    });
+    </script>
+</body>
+</html>

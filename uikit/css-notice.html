@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-css-notice</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">提示 notice</span>
+        </div>
+    </div>
+        
+    <h3 class="ui-block-title">ui-notice 注意</h3>
+    <div class="ui-panel ui-border-tb ui-panel-re ui-ex-minheight200">
+        <section class="ui-notice">
+              <i></i>
+              <p>请检查网络</p>
+        </section>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"ui-notice"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">p</span>&gt;</span>请检查网络<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">section</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-notice 没有内容</h3>
+    <div class="ui-panel ui-border-tb ui-panel-re ui-ex-minheight200">
+        <section class="ui-notice ui-notice-news">
+            <i></i>
+            <p>暂时没有新消息</p>
+        </section>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml"> <span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"ui-notice ui-notice-news"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>暂时没有新消息<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">section</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-notice 附近位置</h3>
+    <div class="ui-panel ui-border-tb ui-panel-re ui-ex-minheight200">
+        <section class="ui-notice ui-notice-nearby">
+            <i></i>
+            <p>分享自己的位置</p>
+        </section>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml">
+<span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"ui-notice ui-notice-nearby"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>分享自己的位置<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">section</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-notice 加载中</h3>
+    <div class="ui-panel ui-border-tb ui-panel-re ui-ex-minheight200">
+        <section class="ui-notice">
+             <p>加载中...</p>
+        </section>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"ui-notice"</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">p</span>&gt;</span>加载中...<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">section</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-notice 加载失败</h3>
+    <div class="ui-panel">
+        <div class="ui-notice-warn">
+            <i class="ui-icon ui-icon-refresh"></i><p>请检查网络</p>
+        </div>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-notice-warn"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-icon ui-icon-refresh"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>请检查网络<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-notice 带按钮的提示</h3>
+    <div class="ui-panel ui-border-tb ui-panel-re ui-ex-minheight200">
+        <section class="ui-notice">
+              <p>待激活的号码</p>
+              <p>待激活的号码</p>
+              <div class="ui-notice-btn">
+                  <button class="ui-btn-primary ui-btn-lg">续费超级会员</button>
+              </div>
+        </section>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"ui-notice"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">p</span>&gt;</span>待激活的号码<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">p</span>&gt;</span>待激活的号码<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-notice-btn"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ui-btn-primary ui-btn-lg"</span>&gt;</span>续费超级会员<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">section</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-loading 加载中 提示</h3>
+    <div class="ui-panel">
+        <div class="ui-loading-wrap">
+            <p>加载中</p>
+            <i class="ui-loading"></i>
+        </div>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-loading-wrap"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>加载中<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-loading"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-tips 提示条</h3>
+    <div class="ui-panel">
+        <div class="ui-tips ui-tips-info">
+            <i></i>提供相关的信息或建议
+        </div>
+        <div class="ui-tips ui-tips-warn">
+            <i></i>警示已经发生或可能在未来发生的问题
+        </div>
+        <div class="ui-tips ui-tips-success">
+            <i></i>提示操作成功或流程成功
+        </div>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tips ui-tips-info"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>提供相关的信息或建议
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tips ui-tips-warn"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>警示已经发生或可能在未来发生的问题
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+ <span class="tag">&lt;<span class="title">div</span>  <span class="attribute">class</span>=<span class="value">"ui-tips ui-tips-success"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>提示操作成功或流程成功
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-tips  消息提醒</h3>
+    <div class="ui-panel">
+        <section class="ui-tips-news-wrap">
+            <div class="ui-tips-news">
+            您有一条新消息
+            </div>
+        </section>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"ui-tips-news-wrap"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tips-news"</span>&gt;</span>
+    您有一条新消息
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">section</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-poptips 浮层提醒</h3>
+    <div class="ui-panel ui-panel-clear">
+        <div class="ui-poptips ui-poptips-info">
+            <div class="ui-poptips-cnt">
+                <i></i>提供相关的信息或建议
+            </div>
+        </div>
+        <div class="ui-poptips ui-poptips-warn">
+            <div class="ui-poptips-cnt">
+                <i></i>警示已经发生或可能发生的问题
+            </div>
+        </div>
+        <div class="ui-poptips ui-poptips-success">
+            <div class="ui-poptips-cnt">
+                <i></i>提示操作成功或流程成功
+            </div>
+        </div>
+    </div>
+    <pre class="ui-module-code ui-border-tb"><code class="xml"><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+
+</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-poptips ui-poptips-info"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-poptips-cnt"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>提供相关的信息或建议
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-poptips ui-poptips-warn"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-poptips-cnt"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>警示已经发生或可能发生的问题
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+ <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-poptips ui-poptips-success"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-poptips-cnt"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>提示操作成功或流程成功
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-poptips 警示</h3>
+    <div class="ui-panel-warp">
+        <div class="ui-tooltips ui-tooltips-warn">
+            <div class="ui-tooltips-cnt ui-tooltips-cnt-link ui-border-b">
+                <i></i>当前网路不可用，请检查你的网路设置。
+            </div>
+        </div>
+    </div>
+    <pre class="ui-module-code ui-border-tb"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tooltips ui-tooltips-warn"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tooltips-cnt ui-tooltips-cnt-link ui-border-b"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>当前网路不可用，请检查你的网路设置。
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-poptips 带箭头</h3>
+    <div class="ui-panel-warp">
+        <div class="ui-tooltips ui-tooltips-guide">
+            <div class="ui-tooltips-cnt ui-tooltips-cnt-link ui-border-b">
+                <i></i>新手引导、功能引导
+            </div>
+        </div>
+    </div>
+    <pre class="ui-module-code ui-border-tb"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tooltips ui-tooltips-guide"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tooltips-cnt ui-tooltips-cnt-link ui-border-b"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>新手引导、功能引导
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-poptips 带按钮</h3>
+    <div class="ui-panel-warp">
+        <div class="ui-tooltips ui-tooltips-guide">
+            <div class="ui-tooltips-cnt ui-border-b">
+                新手引导、功能引导
+                <button class="ui-btn">加入</button>
+            </div>
+        </div>
+    </div>
+    <pre class="ui-module-code ui-border-tb"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tooltips ui-tooltips-guide"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tooltips-cnt ui-border-b"</span>&gt;</span>
+        新手引导、功能引导
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ui-btn"</span>&gt;</span>加入<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-poptips 状态</h3>
+    <div class="ui-panel-warp">
+        <div class="ui-tooltips ui-tooltips-state">
+            <div class="ui-tooltips-cnt ui-tooltips-cnt-link ui-border-b">
+                状态
+            </div>
+        </div>
+    </div>
+    <pre class="ui-module-code ui-border-tb"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tooltips ui-tooltips-state"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tooltips-cnt ui-tooltips-cnt-link ui-border-b"</span>&gt;</span>
+        状态
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+    <h3 class="ui-block-title">ui-poptips 状态带按钮</h3>
+    <div class="ui-panel-warp">
+        <div class="ui-tooltips ui-tooltips-state">
+            <div class="ui-tooltips-cnt ui-border-b">
+                状态
+                <button class="ui-btn ui-btn-primary">加入</button>
+            </div>
+        </div>
+    </div>
+    <pre class="ui-module-code ui-border-tb"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tooltips ui-tooltips-state"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tooltips-cnt ui-border-b"</span>&gt;</span>
+        状态
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ui-btn ui-btn-primary"</span>&gt;</span>加入<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+          
+
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+    });
+    </script>  
+</body>
+</html>

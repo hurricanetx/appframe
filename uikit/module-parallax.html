@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-Parallax</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+  <div class="ui-page-navbar ui-hide">
+      <div class="ui-page-inner">
+          <span class="ui-navbar-left ui-operate">
+              <a href="uikit.html">
+                  <i class="icon icon-back"></i>
+                  <span>UIKit</span>
+              </a>
+          </span>
+          <span class="ui-navbar-center ui-navbar-text">视差动画(Parallax)</span>
+          <span class="ui-navbar-right ui-operate-icon">
+              <a href="module-parallax-code.html">
+                  <i class="icon icon-bars"></i>
+              </a>
+          </span>
+      </div>
+  </div>
+  <style>
+  /* custom */
+  section[data-id="1"] {
+      background-color: #3498db;
+  }
+  section[data-id="2"] {
+      background-color: #40d47e;
+  }
+  section[data-id="3"] {
+      background-color: #ff8c81;
+  }
+  section[data-id="4"] {
+      background-color: #3498db;
+  }
+  .box1 {
+      width: 100px;
+      height: 200px;
+      background-color: #ecf0f1;
+      position: absolute;
+      left: 160px; top: 126px;
+  }
+  .box2 {
+      width: 200px;
+      height: 100px;
+      background-color: #8e44ad;
+      position: absolute;
+      left: 60px; top: 226px;
+  }
+  .box3 {
+      width: 100px;
+      height: 100px;
+      background-color: #34495e;
+      position: absolute;
+      left: 160px; top: 226px;
+  }
+  .box4 {
+      width: 50px;
+      height: 50px;
+      background-color: #e74c3c;
+      position: absolute;
+      left: 185px; top: 250px;
+  }
+  </style>
+  <div class="pages vertical/horizontal  default/cover  forward/backward">
+      <!-- 第一屏 -->
+      <section class="page">
+         <div class="box1" data-animation="slideToBottom" data-timing-function="ease-in"></div>
+         <div class="box2" data-animation="slideToTop" data-delay="300" data-timing-function="ease-out"></div>
+         <div class="box3" data-animation="slideToRight" data-delay="600" data-timing-function="linear"></div>
+         <div class="box4" data-animation="slideToLeft" data-delay="900" data-timing-function="cubic-bezier(.12,.73,.62,1.38)"></div>
+     </section>
+
+     <!-- 第二屏 -->
+     <section class="page">
+         <div class="box1" data-animation="followSlide" data-duration="1000"></div>
+         <div class="box2" data-animation="followSlide" data-delay="200" data-duration="1000"></div>
+         <div class="box3" data-animation="followSlide" data-delay="400" data-duration="1000"></div>
+         <div class="box4" data-animation="followSlide" data-delay="600" data-duration="1000"></div>
+     </section>
+
+     <!-- 第三屏 -->
+     <section class="page">
+         <div class="box1" data-animation="fadeInToBottom"></div>
+         <div class="box2" data-animation="fadeInToTop" data-delay="200"></div>
+         <div class="box3" data-animation="fadeInToLeft" data-delay="400"></div>
+         <div class="box4" data-animation="fadeInToRight" data-delay="600"></div>
+     </section>
+
+     <!-- 第四屏 -->
+     <section class="page">
+         <div class="box1" data-animation="fadeIn"></div>
+         <div class="box2" data-animation="fadeOut" data-delay="800"></div>
+     </section>
+ </div>
+
+  <link rel="stylesheet" type="text/css" href="../assets/css/parallax.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/parallax-animation.min.css">
+  <script type="text/javascript" src="../assets/module/effect.parallax.min.js"></script>
+  <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+      $("body").autoapp();
+      $('.pages').parallax({
+          loading:   true,
+          indicator: true,
+          arrow:     true
+      });
+  });
+  </script>
+</body>
+</html>

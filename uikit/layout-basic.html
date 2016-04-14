@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-layout-scrollview</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">常用布局 - 基础组件</span>
+        </div>
+    </div>
+     
+    <h3 class="ui-block-title">通栏面板</h3>
+    <div class="ui-panel ui-border-tb">
+        这就是通栏面板
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+        <xmp class="ui-module-code">
+<div class="ui-panel ui-border-tb">
+    这就是通栏面板
+</div>
+        </xmp></pre>
+
+    <h3 class="ui-block-title">无边通栏面板</h3>
+    <div class="ui-panel ui-panel-re ui-border-tb">
+        这就是无边通栏面板
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+        <xmp class="ui-module-code">
+<div class="ui-panel ui-panel-re ui-border-tb">
+    这就是无边通啦面板
+</div>
+        </xmp></pre>
+
+    <h3 class="ui-block-title">圆角内缩面板</h3>
+    <div class="ui-panel-inset">
+        <ul class="ui-list ui-list-text">
+            <li class="ui-border-t ui-list-item-link">
+                <p>标题标题标题标题标题标题标题标题标题标题标题</p>
+            </li>
+            <li class="ui-border-t">
+                <p>标题标题标题标题标题标题标题标题标题标题标题</p>
+            </li>
+        </ul>
+    </div>
+    <ul class="ui-list ui-list-text ui-border-tb ui-inset">
+        <li class="ui-border-t ui-list-item-link">
+            <p>标题标题标题标题标题标题标题标题标题标题标题</p>
+        </li>
+        <li class="ui-border-t">
+            <p>标题标题标题标题标题标题标题标题标题标题标题</p>
+        </li>
+    </ul>
+    <pre class="ui-module-code ui-border-tb">
+有两种使用方式:
+1) 使用面板：ui-panel-inset
+2) 让其他组件内缩: ui-inset
+                    <xmp class="ui-module-code">
+<div class="ui-panel-inset">
+    这就是 圆角内缩面板
+</div>
+<ul class="ui-list ui-list-text ui-border-tb ui-inset">
+    <li class="ui-border-t ui-list-item-link">
+        <p>标题标题标题标题标题标题标题标题标题标题标题</p>
+    </li>
+    <li class="ui-border-t">
+        <p>标题标题标题标题标题标题标题标题标题标题标题</p>
+    </li>
+</ul>
+        </xmp></pre>
+
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+    });
+    </script>  
+</body>
+</html>

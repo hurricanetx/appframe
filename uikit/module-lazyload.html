@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-lazyload</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">懒加载</span>
+        </div>
+    </div>
+       
+    <h3 class="ui-block-title">懒加载是提速的好方式</h3>
+    <div class="ui-panel ui-border-tb">
+        懒加载使用的方式为：<br/>
+        给图片或者其他元素添加data-original属性，然后调用lazyLoad完成加载。<br/>
+        值得注意的是若你使用的是scrollview，则需要向lazyLoad函数传入scroll的父节点。<br/>
+        若有tab触发事件的页面，需要在tab切换是再次调用lazyload<br/>
+        示例请参考，最后的示例页面:
+    </div>
+    <pre class="ui-module-code ui-border-tb ui-panel-code"><xmp class="ui-module-code">
+<img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg">
+$(".lazyload").lazyLoad();
+</xmp></pre>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+    });
+    </script>  
+</body>
+</html>

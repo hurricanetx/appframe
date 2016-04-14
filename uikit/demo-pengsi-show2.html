@@ -1,0 +1,672 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>捧丝儿活动详情 - 捧场</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body>
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="demo-pengsi.html">
+                    <i class="icon icon-back"></i>
+                    <span>捧丝儿</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">活动详情</span>
+        </div>
+    </div>
+    <div class="ui-page-toolbar ui-hide appdown">
+        <div class="appdown-img"><img src="./img/120.png" alt=""></div>
+        <div class="appdown-txt">
+            <h4>捧丝儿 - 捧主题娱乐社交平台</h4>
+            <p>爱我，就捧我</p>
+        </div>
+        <button id="appdown-btn">下载/打开</button>
+    </div>
+  
+    <!-- 海报 -->
+    <div class="ui-grid-row ui-tapable" data-target="demo-pengsi-showrule.html">
+        <img src="http://file.pengsi.cn/show/image/70/02/10/100270/l.jpg" class="col-100"/>
+    </div>
+    <!-- /海报 -->
+    <!-- 渠道选择 -->
+    <ul class="ui-list ui-list-text ui-border-b">
+        <li class="ui-list-item-link">
+            <div class="ui-list-info ui-tapable" data-target="demo-pengsi-showrule.html">
+                <h4>
+                    参与人数：9999
+                    <span class="ui-float-right">规则</span>
+                </h4>
+            </div>
+        </li>
+    </ul>
+    <!-- /渠道选择 -->
+    <!-- 明星 3d 轮盘 -->
+    <style type="text/css">
+    .ui-panel-gallery {
+        margin: 7px 0;
+        white-space: normal;
+        width: 100%;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        background-color: #fff;
+    }
+    .ui-panel-gallery ul {
+        padding: 6px 5px;
+        display: box;
+        display: -webkit-box;
+        -moz-box-orient:horizontal;
+        -webkit-box-orient:horizontal;
+        box-orient:horizontal;
+    }
+    .ui-panel-gallery li {
+        padding: 5px;
+    }
+    .ui-panel-gallery .pengsi-info-b {
+        text-align: center;
+        height:30px;
+        padding: 1px 0px;
+        bottom: 5px;
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .ui-panel-gallery .pengsi-info-b img{
+      width:14px;height:14px;vertical-align: middle;padding-left: 4px;
+    }
+    </style>
+    <h3 class="ui-block-title">星星</h3>
+    <div class="ui-panel-gallery">
+        <!--
+        ul>li.ui-tapable[data-target=demo-pengsi-personpage.html]*10>div.pengsi-faceitem>img[src=http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg]+div.pengsi-info-b>span{星星昵称}+img[src=http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png]+span{2.6万}
+
+        ul.ui-grid-row>li.col-33.ui-tapable[data-target=demo-pengsi-personpage.html]*10>div.pengsi-faceitem>img[src=http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg]+div.pengsi-info-b>span{星星昵称}+br+img[src=http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png]+span{2.6万}
+        -->
+        <ul class="ui-grid-row">
+            <li class="col-33 ui-tapable" data-target="demo-pengsi-personpage.html">
+                <div class="pengsi-faceitem">
+                    <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg" alt="">
+                    <div class="pengsi-info-b">
+                        <span>星星昵称</span>
+                        <br>
+                        <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                        <span>2.6万</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-33 ui-tapable" data-target="demo-pengsi-personpage.html">
+                <div class="pengsi-faceitem">
+                    <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg" alt="">
+                    <div class="pengsi-info-b">
+                        <span>星星昵称</span>
+                        <br>
+                        <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                        <span>2.6万</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-33 ui-tapable" data-target="demo-pengsi-personpage.html">
+                <div class="pengsi-faceitem">
+                    <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg" alt="">
+                    <div class="pengsi-info-b">
+                        <span>星星昵称</span>
+                        <br>
+                        <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                        <span>2.6万</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-33 ui-tapable" data-target="demo-pengsi-personpage.html">
+                <div class="pengsi-faceitem">
+                    <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg" alt="">
+                    <div class="pengsi-info-b">
+                        <span>星星昵称</span>
+                        <br>
+                        <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                        <span>2.6万</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-33 ui-tapable" data-target="demo-pengsi-personpage.html">
+                <div class="pengsi-faceitem">
+                    <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg" alt="">
+                    <div class="pengsi-info-b">
+                        <span>星星昵称</span>
+                        <br>
+                        <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                        <span>2.6万</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-33 ui-tapable" data-target="demo-pengsi-personpage.html">
+                <div class="pengsi-faceitem">
+                    <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg" alt="">
+                    <div class="pengsi-info-b">
+                        <span>星星昵称</span>
+                        <br>
+                        <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                        <span>2.6万</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-33 ui-tapable" data-target="demo-pengsi-personpage.html">
+                <div class="pengsi-faceitem">
+                    <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg" alt="">
+                    <div class="pengsi-info-b">
+                        <span>星星昵称</span>
+                        <br>
+                        <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                        <span>2.6万</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-33 ui-tapable" data-target="demo-pengsi-personpage.html">
+                <div class="pengsi-faceitem">
+                    <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg" alt="">
+                    <div class="pengsi-info-b">
+                        <span>星星昵称</span>
+                        <br>
+                        <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                        <span>2.6万</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-33 ui-tapable" data-target="demo-pengsi-personpage.html">
+                <div class="pengsi-faceitem">
+                    <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg" alt="">
+                    <div class="pengsi-info-b">
+                        <span>星星昵称</span>
+                        <br>
+                        <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                        <span>2.6万</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-33 ui-tapable" data-target="demo-pengsi-personpage.html">
+                <div class="pengsi-faceitem">
+                    <img src="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg" alt="">
+                    <div class="pengsi-info-b">
+                        <span>星星昵称</span>
+                        <br>
+                        <img src="http://m.pengsi.cn/assets/images/img_mainpage_flowericon@2x.png" alt="">
+                        <span>2.6万</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- /明星 3d 轮盘 -->
+    <!-- tabview -->
+    <div class="ui-panel ui-panel-re" id="showContainer">
+        <nav class="ui-tab pengsi ui-border-b ui-view-autofix-top">
+            <ul>
+                <li class="current">捧丝儿团</li>
+                <li>评论</li>
+            </ul>
+        </nav>
+        <div class="ui-tab-slide">
+            <style type="text/css">
+            .ui-list.ui-tab-slide-item .ui-list-thumb{
+                height: 68px;
+            }
+            .ui-list-function.ui-tab-slide-item .ui-list-info {padding-right: 100px; }
+            .ui-list-thumb img{
+                width:100%;
+                border-radius: 0.4em;
+            }
+            .ui-list-ext {
+                position: absolute;
+                top: 60%;
+                right: 15px;
+                margin-top: -15px;
+                font-size: 1.27em;
+                color:#808080;
+            }
+            .ui-list-ext span {
+                font-size: 2.5em;
+                color:#282828;
+            }
+            .ui-list-comment-info p img{width:18px;height:18px;vertical-align: top;padding-left: 4px;}
+            .ui-list-comment-info p span{
+                padding-left: 5px;padding-right: 5px;
+            }
+            .ui-list-comment-info-t {height:44px;line-height: 44px;font-size: 16px;color:#808080;}
+            .ui-list-comment-info-t img {width:18px;height:18px;padding-left: 4px;}
+            </style>
+            <ul class="ui-list ui-list-function ui-tab-slide-item current">
+                <li class="ui-border-t ui-grid-row">
+                    <p class="ui-list-comment-info-t col-50">
+                        我的收获：5000<img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt="">
+                    </p>
+                    <p class="ui-list-comment-info-t col-50">
+                        我的排名：29
+                    </p>
+                </li>
+
+                <!--
+                li.ui-border-t*20>div.ui-list-thumb>img.lazyload[data-original=http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg]+^div.ui-list-info.ui-list-comment-info>h4{用户昵称}>img[src=http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png]+img[src=http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png]+^p>img[src=http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png]+span{$@-615}+^^div.ui-list-ext{No.}>span{$@1}
+                -->
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>634</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>1</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>633</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>2</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>632</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>3</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>631</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>4</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>630</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>5</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>629</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>6</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>628</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>7</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>627</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>8</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>626</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>9</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>625</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>10</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>624</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>11</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>623</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>12</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>622</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>13</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>621</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>14</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>620</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>15</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>619</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>16</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>618</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>17</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>617</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>18</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>616</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>19</span></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb"><img src="" alt="" class="lazyload" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/m.jpg"></div>
+                    <div class="ui-list-info ui-list-comment-info">
+                        <h4>用户昵称<img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt=""><img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt=""></h4>
+                        <p><img src="http://m.pengsi.cn/assets/images/img_mainpage_grassicon.png" alt=""><span>615</span></p>
+                    </div>
+                    <div class="ui-list-ext">No.<span>20</span></div>
+                </li>
+            </ul>
+            <div class="ui-tab-slide-item">
+                <!--
+                ul.ui-list-comment>li.ui-grid-row.ui-border-t*20>div.col-20.ui-list-comment-thumb>img.lazyload.ui-tapable[data-target=demo-pengsi-personpage.html][data-original=http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg]+^div.col-80.ui-list-comment-info>h4.col-100.ui-tapable[data-target=demo-pengsi-personpage.html]{用户昵称}>img[src=http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png]+img[src=http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png]+span{1天前}+^p.col-100{这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容}
+                -->
+                <ul class="ui-list-comment">
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                    <li class="ui-grid-row ui-border-t">
+                        <div class="col-20 ui-list-comment-thumb"><img src="" alt="" class="lazyload ui-tapable" data-target="demo-pengsi-personpage.html" data-original="http://file.pengsi.cn/user/portrait/97/44/12/124497/s.jpg"></div>
+                        <div class="col-80 ui-list-comment-info">
+                            <h4 class="col-100 ui-tapable" data-target="demo-pengsi-personpage.html">用户昵称
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-rz-nvLv1@2x.png" alt="">
+                                <img src="http://m.pengsi.cn/assets/images/ico-verify-pengyeLv0@2x.png" alt="">
+                                <span>1天前</span>
+                            </h4>
+                            <p class="col-100">这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容这里是评论内容，各种内容</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#showContainer").find(".ui-tab li").tap(function(){
+                var cur = $(this).index();
+                $(this).addClass("current").siblings().removeClass("current");
+                $("#showContainer").find(".ui-tab-slide-item").eq(cur).addClass("current").siblings().removeClass("current");
+                $(".lazyload").lazyLoad();
+            });
+            $(".lazyload").lazyLoad();
+            $("body").autoapp({app : {
+                ios: {
+                    url:"https://itunes.apple.com/cn/app/peng-si-er/id672299307?mt=8",
+                    enter: "pengsi://portalrank?0"
+                },
+                android: {
+                    url: null,
+                    // url : "http://www.chforce.com/pengsi/PengSi.apk",
+                    enter: "pengsi://portalrank?0"
+                },btn : "#appdown-btn"
+            },mode: true});
+        });
+    </script>   
+</body>
+</html>

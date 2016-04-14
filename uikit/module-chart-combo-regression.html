@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-module-chart-combo-regression</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="module-chart.html">
+                    <i class="icon icon-back"></i>
+                    <span>超级图表</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">combo-regression</span>
+        </div>
+    </div>
+    <style>
+    #container {
+        margin: 0 auto;
+        width:100%;
+        height:50%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        text-align: center;
+    }
+    </style>
+    <div id="container"></div>
+    <script type="text/javascript" src="../assets/module/ext.chart.min.js"></script>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+        new Highcharts.Chart({
+                            chart: {
+                                renderTo: 'container'
+                            },
+                            xAxis: {
+                                min: -0.5,
+                                max: 5.5
+                            },
+                            yAxis: {
+                                min: 0
+                            },
+                            title: {
+                                text: 'Scatter plot with regression line'
+                            },
+                            series: [{
+                                type: 'line',
+                                name: 'Regression Line',
+                                data: [[0, 1.11], [5, 4.51]],
+                                marker: {
+                                    enabled: false
+                                },
+                                states: {
+                                    hover: {
+                                        lineWidth: 0
+                                    }
+                                },
+                                enableMouseTracking: false
+                            }, {
+                                type: 'scatter',
+                                name: 'Observations',
+                                data: [1, 1.5, 2.8, 3.5, 3.9, 4.2],
+                                marker: {
+                                    radius: 4
+                                }
+                            }]
+                        });
+    });
+    </script>
+</body>
+</html>

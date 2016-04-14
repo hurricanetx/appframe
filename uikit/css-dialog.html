@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-css-dialog</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">弹窗 dialog</span>
+        </div>
+    </div>
+
+    <h3 class="ui-block-title">弹出确认窗</h3>
+    <div class="ui-panel ui-border-tb">
+        <button class="ui-btn" id="demo-dialog1-handle">开通会员</button>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml">
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-dialog show"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-dialog-cnt"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-dialog-bd"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span>&gt;</span>开通年费QQ会员即可领取欢乐斗地主感恩节回馈礼包！<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-dialog-ft ui-btn-group"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>取消<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>开通<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>        
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+                
+    <h3 class="ui-block-title">加载提示</h3>
+    <div class="ui-panel ui-border-tb">
+        <button class="ui-btn" id="demo-dialog2-handle">加载更多信息</button>
+    </div>
+    <pre class="ui-module-code ui-border-tb">
+                <code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-dialog ui-dialog-notice show"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-dialog-cnt"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-loading-bright"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">p</span>&gt;</span>加载中...<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+ <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+    <div class="ui-panel ui-border-tb">
+    <p class="app-txt-sub">js触发代码：</p>
+                <xmp class="ui-module-code">
+$(document).ready(function(){
+   $("#demo-dialog1-handle").tap(function(){
+    $('<div class="ui-dialog show"><div class="ui-dialog-cnt"><div class="ui-dialog-bd"><div>开通年费QQ会员即可领取欢乐斗地主感恩节回馈礼包！</div></div><div class="ui-dialog-ft ui-btn-group"><button type="button">取消</button><button type="button">开通</button></div></div></div>').appendTo($("body")).tap(function(){$(this).remove();});
+   });
+   $("#demo-dialog2-handle").tap(function(){
+    $('<div class="ui-dialog ui-dialog-notice show" id="demo-dialog2"><div class="ui-dialog-cnt"><i class="ui-loading-bright"></i><p>加载中...</p></div></div>').appendTo($("body")).tap(function(){$(this).remove();});
+   });
+});
+                </xmp>
+    </div>
+
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+       $("#demo-dialog1-handle").tap(function(){
+        $('<div class="ui-dialog show"><div class="ui-dialog-cnt"><div class="ui-dialog-bd"><div>开通年费QQ会员即可领取欢乐斗地主感恩节回馈礼包！</div></div><div class="ui-dialog-ft ui-btn-group"><button type="button">取消</button><button type="button">开通</button></div></div></div>').appendTo($("body")).tap(function(){$(this).remove();});
+       });
+       $("#demo-dialog2-handle").tap(function(){
+        $('<div class="ui-dialog ui-dialog-notice show" id="demo-dialog2"><div class="ui-dialog-cnt"><i class="ui-loading-bright"></i><p>加载中...</p></div></div>').appendTo($("body")).tap(function(){$(this).remove();});
+       });
+       $("body").autoapp();
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>升级提示</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+<div class="ui-page-navbar ui-hide">
+    <div class="ui-page-inner">
+        <span class="ui-navbar-left ui-operate">
+            <a href="demo-pengsi.html">
+                <i class="icon icon-back"></i>
+                <span>捧丝儿</span>
+            </a>
+        </span>
+        <span class="ui-navbar-center ui-navbar-text">捧丝儿</span>
+    </div>
+</div>
+<style>
+    .content {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        position: absolute;
+        text-align: center;
+    }
+    .content ul {
+        list-style: none;
+        padding: 20px 0px;
+        color:#c0c0c0;
+    }
+    .content .btn{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        border: 0 none;
+        color: #282828;
+        background-color: #fd2;
+        background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.38,#fd2),to(##fe802d));
+        vertical-align: top;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+        -webkit-box-sizing: border-box;
+        border: 1px solid #fd2;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        font-size: 18px;
+        height: 44px;
+        line-height: 42px;
+        display: block;
+        width: 80%;
+        border-radius: 5px;
+        padding: 0 13px;
+        min-width: 56px;
+        text-decoration: none;
+    }
+    .logo img {width:100px;height:100px;}
+    /*@media screen and (-webkit-min-device-pixel-ratio: 2) {
+        
+    }*/
+</style>
+<div class="content">
+    <div class="logo">
+        <img src="img/200.png" alt="" />
+        <h3>捧丝儿1.2.10</h3>
+    </div>
+    <ul>
+        <li>优化了体验和性能</li>
+    </ul>
+    <a href="https://itunes.apple.com/cn/app/peng-si-er/id672299307?mt=8" class="btn">立即升级 开启支付</a>
+</div>
+<script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("body").autoapp();
+});
+</script>  
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>uikit-layout-grid</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/zen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+    <script src="../assets/vector/zepto.min.js"></script>
+    <script src="../assets/vector/zen.min.js"></script>
+</head>
+<body class="ui-tapcopy">
+
+    <div class="ui-page-navbar ui-hide">
+        <div class="ui-page-inner">
+            <span class="ui-navbar-left ui-operate">
+                <a href="uikit.html">
+                    <i class="icon icon-back"></i>
+                    <span>UIKit</span>
+                </a>
+            </span>
+            <span class="ui-navbar-center ui-navbar-text">常用布局 - 栅格系统</span>
+        </div>
+    </div>
+        
+    <h3 class="ui-block-title">名词解释</h3>
+    <div class="ui-panel ui-border-tb">
+        <ol>
+            <li>栅格(m)：视觉化系统中显示内容的区域</li>
+            <li>槽(a)：视觉化系统中栅格之间的间隔</li>
+            <li>留白(b)：视觉化单个栅格中的留白区域</li>
+            <li>栅格计算公式：(m+a)*n-a = 320-2b； 该公式表示在移动设备中形成n个栅格</li>
+            <li>本框架系统中采用在移动设备中，最多形成5个栅格的模式，以保证最少44px/320px的触摸点</li>
+        </ol>
+    </div>
+    <h3 class="ui-block-title">带有槽的栅格演示 div.ui-grid-row</h3>
+    <div class="ui-grid">
+        <div class="ui-grid-row">
+            <div class="col-50">.col-50</div>
+            <div class="col-50">.col-50</div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="col-33">.col-33</div>
+            <div class="col-33">.col-33</div>
+            <div class="col-33">.col-33</div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="col-25">.col-25</div>
+            <div class="col-25">.col-25</div>
+            <div class="col-25">.col-25</div>
+            <div class="col-25">.col-25</div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="col-20">.col-20</div>
+            <div class="col-20">.col-20</div>
+            <div class="col-20">.col-20</div>
+            <div class="col-20">.col-20</div>
+            <div class="col-20">.col-20</div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="col-33">.col-33</div>
+            <div class="col-66">.col-66</div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="col-25">.col-25</div>
+            <div class="col-25">.col-25</div>
+            <div class="col-50">.col-50</div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="col-75">.col-75</div>
+            <div class="col-25">.col-25</div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="col-80">.col-80</div>
+            <div class="col-20">.col-20</div>
+        </div>
+    </div>
+
+    <h3 class="ui-block-title">无槽栅格演示 div.ui-grid-row.no-gutter</h3>
+    <div class="ui-grid">
+        <div class="ui-grid-row no-gutter">
+            <div class="col-50">.col-50</div>
+            <div class="col-50">.col-50</div>
+        </div>
+        <div class="ui-grid-row no-gutter">
+            <div class="col-33">.col-33</div>
+            <div class="col-33">.col-33</div>
+            <div class="col-33">.col-33</div>
+        </div>
+        <div class="ui-grid-row no-gutter">
+            <div class="col-25">.col-25</div>
+            <div class="col-25">.col-25</div>
+            <div class="col-25">.col-25</div>
+            <div class="col-25">.col-25</div>
+        </div>
+        <div class="ui-grid-row no-gutter">
+            <div class="col-20">.col-20</div>
+            <div class="col-20">.col-20</div>
+            <div class="col-20">.col-20</div>
+            <div class="col-20">.col-20</div>
+            <div class="col-20">.col-20</div>
+        </div>
+        <div class="ui-grid-row no-gutter">
+            <div class="col-33">.col-33</div>
+            <div class="col-66">.col-66</div>
+        </div>
+        <div class="ui-grid-row no-gutter">
+            <div class="col-25">.col-25</div>
+            <div class="col-25">.col-25</div>
+            <div class="col-50">.col-50</div>
+        </div>
+        <div class="ui-grid-row no-gutter">
+            <div class="col-75">.col-75</div>
+            <div class="col-25">.col-25</div>
+        </div>
+        <div class="ui-grid-row no-gutter">
+            <div class="col-80">.col-80</div>
+            <div class="col-20">.col-20</div>
+        </div>
+    </div>
+
+    <h3 class="ui-block-title">栅格嵌套演示</h3>
+    <div class="ui-grid">
+        <div class="ui-grid-row">
+            <div class="col-50">.col-50
+                <div class="ui-grid-row">
+                    <div class="col-50">.col-50</div>
+                    <div class="col-50">.col-50</div>
+                </div>
+            </div>
+            <div class="col-50">.col-50
+                <div class="ui-grid-row">
+                    <div class="col-50">.col-50</div>
+                    <div class="col-50">.col-50</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="ui-block-title">
+        响应式栅格<br/><br/>
+        <p>栅格在手机和平板呈现出不同的状态，col用于手机，tablet用于平板或者更大的设备</p>
+    </h3>
+
+    <div class="ui-grid">
+        <div class="ui-grid-row">
+            <div class="col-100 tablet-50">.col-100.tablet-50</div>
+            <div class="col-100 tablet-50">.col-100.tablet-50</div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="col-50 tablet-25">.col-50.tablet-25</div>
+            <div class="col-50 tablet-25">.col-50.tablet-25</div>
+            <div class="col-50 tablet-25">.col-50.tablet-25</div>
+            <div class="col-50 tablet-25">.col-50.tablet-25</div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="col-100 tablet-40">.col-100.tablet-40</div>
+            <div class="col-50 tablet-60">.col-50.tablet-60</div>
+            <div class="col-50 tablet-66">.col-50.tablet-66</div>
+            <div class="col-100 tablet-33">.col-100.tablet-33</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../assets/module/ui.autoapp.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").autoapp();
+    });
+    </script>  
+</body>
+</html>
